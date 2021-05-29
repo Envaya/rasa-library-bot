@@ -1,0 +1,44 @@
+version: "2.0"
+
+store_entities_as_slots: true
+
+intents:
+  - greet
+  - introduce
+  - goodbye
+
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+    auto_fill: true
+    influence_conversation: true
+
+responses:
+  utter_greet:
+    - condition:
+        - type: slot
+          name: name
+          value: null
+      text: |
+        Hallo, ich bin Auxilio. Wie kann ich helfen?
+    - text: |
+        Hallo, {name}. Wie kann ich helfen?
+  utter_confirm:
+    - text: |
+        Okay
+    - text: |
+        Zu Befehl!
+    - text: |
+        Stets zu Diensten
+  utter_goodbye:
+    - text: |
+        Tschüss
+    - text: |
+        Bis bald
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
