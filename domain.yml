@@ -1,0 +1,47 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- introduce:
+    use_entities: true
+- goodbye:
+    use_entities: true
+entities:
+- name
+- '"name"'
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - condition:
+    - name: name
+      type: slot
+      value: null
+    text: |
+      Hallo, ich bin Auxilio. Wie kann ich helfen?
+  - text: |
+      Hallo, {name}. Wie kann ich helfen?
+  utter_confirm:
+  - text: |
+      Okay
+  - text: |
+      Zu Befehl!
+  - text: |
+      Stets zu Diensten
+  utter_goodbye:
+  - text: |
+      Tschüss
+  - text: |
+      Bis bald
+actions: []
+forms: {}
+e2e_actions: []
