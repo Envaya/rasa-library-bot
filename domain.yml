@@ -39,7 +39,7 @@ responses:
       Stets zu Diensten
   utter_goodbye:
   - text: |
-      Tschüss
+      Tschuess
   - text: |
       Bis bald
 actions: []

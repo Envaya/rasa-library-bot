@@ -5,17 +5,17 @@ nlu:
   examples: |
     - hi
     - hallo
-    - salü
+    - salu
     - sali
-    - grüezi
+    - gruezi
 - intent: introduce
   examples: |
-    - ich heiße [Max]("name")
+    - ich heisse [Max]("name")
     - ich bin [Max]("name")
     - meine Name ist [Max]("name")
 - intent: goodbye
   examples: |
-    - tschüss
+    - tschuess
     - bis bald
     - adieu
     - cheerio

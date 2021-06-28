@@ -9,7 +9,7 @@ stories:
     intent: greet
   - action: utter_greet
   - user: |
-      Tschüss
+      Tschuess
   - action: utter_goodbye
 
 - story: happy path 2
