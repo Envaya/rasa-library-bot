@@ -1,13 +1,15 @@
 version: "2.0"
 
 stories:
-- story: happy path
+- story: search_book
   steps:
   - intent: greet
-  - action: utter_greet
-  - intent: introduce
+  - action: utter_services
+  - intent: search_book
+  - action: utter_ask_booktitle
+  - intent: inform_book_location
     entities:
-      - name: Peter
-  - action: utter_greet
+    - book: Harry Potter
+  - action: utter_location
   - intent: goodbye
   - action: utter_goodbye

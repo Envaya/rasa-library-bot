@@ -8,11 +8,14 @@ nlu:
     - salu
     - sali
     - gruezi
-- intent: introduce
-  examples: |
-    - ich heisse [Max]("name")
-    - ich bin [Max]("name")
-    - meine Name ist [Max]("name")
+    - guten tag
+    - servus
+    - hoi
+    - ciao
+    - hello
+    - moin
+    - hey
+
 - intent: goodbye
   examples: |
     - tschuess
@@ -20,3 +23,40 @@ nlu:
     - adieu
     - cheerio
     - bye bye
+    - merci
+    - danke
+    - dankeschoen
+
+- intent: affirm
+  examples: |
+    - ja
+    - yes
+    - jo
+    - jep
+    - joo
+    - jaa
+    - genau
+    - korrekt
+    - ja genau
+
+- intent: search_book
+  examples: |
+    - Ich suche ein Buch
+    - Buch
+    - Ich suche [chatbot technology](book)
+    - Wo ist [chatbot technology](book)
+    - Ich möchte ein Buch ausleihen
+    - Wo ist das Buch
+    - Zeig mir wo das Buch ist
+    - Gibt es das Buch
+
+- intent: inform_book_location
+  examples: |
+    - [chatbot technology](book)
+    - [Bibel](book)
+    - [The design of future things](book)
+    - Ich suche [Harry Potter](book)
+    - [Herr der Ringe](book)
+    - [Andersens Märchen](book)
+    - [Das Urteil](book)
+    - [Gespräch mit dem Betrunkenen](book)

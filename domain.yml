@@ -7,29 +7,34 @@ session_config:
 intents:
 - greet:
     use_entities: true
-- introduce:
-    use_entities: true
 - goodbye:
     use_entities: true
+- search_book:
+    use_entities: true
+- inform_book_location:
+    use_entities: true
+- affirm:
+    use_entities: true
+- introduce:
+    use_entities: true
 entities:
+- book
 - name
-- '"name"'
 slots:
   name:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  book:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
-  - condition:
-    - name: name
-      type: slot
-      value: null
-    text: |
-      Hallo, ich bin Auxilio. Wie kann ich helfen?
-  - text: |
-      Hallo, {name}. Wie kann ich helfen?
+  - text: Hallo, ich bin Auxilio. Wie kann ich dir helfen?
+  - text: Hallo. Wie kann ich helfen?
   utter_confirm:
   - text: |
       Okay
@@ -42,6 +47,18 @@ responses:
       Tschuess
   - text: |
       Bis bald
-actions: []
+  utter_services:
+  - text: |
+      Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
+  utter_ask_booktitle:
+  - text: |
+      Welches Buch suchst du?
+  utter_location:
+  - text: Du findest {book} im 2. Stock.
+actions:
+- utter_ask_booktitle
+- utter_goodbye
+- utter_location
+- utter_services
 forms: {}
 e2e_actions: []
