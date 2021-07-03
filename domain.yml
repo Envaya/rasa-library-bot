@@ -42,6 +42,9 @@ responses:
       Tschüss
   - text: |
       Bis bald
+  utter_test:
+  - text: |
+      Test
 actions: []
 forms: {}
 e2e_actions: []
