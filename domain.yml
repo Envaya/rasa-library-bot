@@ -9,23 +9,23 @@ intents:
     use_entities: true
 - goodbye:
     use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
 - search_book:
     use_entities: true
 - inform_book_location:
     use_entities: true
-- affirm:
-    use_entities: true
-- introduce:
-    use_entities: true
 entities:
 - book
-- name
 slots:
-  name:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
   book:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
@@ -33,32 +33,24 @@ slots:
     influence_conversation: true
 responses:
   utter_greet:
-  - text: Hallo, ich bin Auxilio. Wie kann ich dir helfen?
-  - text: Hallo. Wie kann ich helfen?
-  utter_confirm:
-  - text: |
-      Okay
-  - text: |
-      Zu Befehl!
-  - text: |
-      Stets zu Diensten
+  - text: Hey! Wie gehts?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Hier ist etwas fuer dich:'
+  utter_did_that_help:
+  - text: Hat das geholfen?
+  utter_happy:
+  - text: Super, mach weiter!
   utter_goodbye:
-  - text: |
-      Tschuess
-  - text: |
-      Bis bald
+  - text: Auf Wiedersehen
+  utter_iamabot:
+  - text: Ich bin ein Bot von Rasa.
   utter_services:
-  - text: |
-      Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
+  - text: Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
   utter_ask_booktitle:
-  - text: |
-      Welches Buch suchst du?
+  - text: Welches Buch suchst du?
   utter_location:
   - text: Du findest {book} im 2. Stock.
-actions:
-- utter_ask_booktitle
-- utter_goodbye
-- utter_location
-- utter_services
+actions: []
 forms: {}
 e2e_actions: []

@@ -3,41 +3,63 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hi
+    - hey
     - hallo
-    - salu
-    - sali
-    - gruezi
-    - guten tag
-    - servus
+    - hi
+    - hallo du
+    - guten morgen
+    - guten abend
+    - moin
     - hoi
     - ciao
-    - hello
-    - moin
-    - hey
+    - gutenmorgen
+    - gutenabend
+    - abend
+    - Guten Morgen
 
 - intent: goodbye
   examples: |
     - tschuess
-    - bis bald
+    - ciao
     - adieu
-    - cheerio
-    - bye bye
-    - merci
+    - man sieht sich
     - danke
-    - dankeschoen
 
 - intent: affirm
   examples: |
     - ja
-    - yes
-    - jo
-    - jep
-    - joo
-    - jaa
     - genau
+    - so ist es
     - korrekt
-    - ja genau
+    - jawohl
+
+- intent: deny
+  examples: |
+    - nein
+    - ne
+    - nee
+    - nicht
+    - no
+
+- intent: mood_great
+  examples: |
+    - super
+    - perfekt
+    - gut
+    - fuehl mich gut
+    - grossartig
+
+- intent: mood_unhappy
+  examples: |
+    - schrecklich
+    - schlecht
+    - sehr schlecht
+    - traurig
+
+- intent: bot_challenge
+  examples: |
+    - Bist du ein Bot?
+    - Bist du ein Mensch?
 
 - intent: search_book
   examples: |
@@ -60,3 +82,5 @@ nlu:
     - [Andersens Märchen](book)
     - [Das Urteil](book)
     - [Gespräch mit dem Betrunkenen](book)
+    - [Der kleine Prinz](book)
+    - [The Art of Writing](book)
