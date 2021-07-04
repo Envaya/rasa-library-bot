@@ -72,7 +72,7 @@ nlu:
     - Zeig mir wo das Buch ist
     - Gibt es das Buch
 
-- intent: inform_book_location
+- intent: inform_book
   examples: |
     - [chatbot technology](book)
     - [Bibel](book)

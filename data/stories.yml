@@ -29,15 +29,27 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: search book
+- story: intro
   steps:
   - intent: greet
   - action: utter_services
+
+- story: search book
+  steps:
   - intent: search_book
+  - action: utter_confirm_booksearch
+  - intent: affirm
   - action: utter_ask_booktitle
-  - intent: inform_book_location
+  - intent: utter_book_info
     entities:
     - book: "Harry Potter"
-  - action: utter_location
+  - action: utter_book_info
   - intent: goodbye
   - action: utter_goodbye
+
+- story: search book deny
+  steps:
+  - intent: search_book
+  - action: utter_confirm_booksearch
+  - intent: deny
+  - action: utter_services

@@ -49,8 +49,10 @@ responses:
   - text: Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
   utter_ask_booktitle:
   - text: Welches Buch suchst du?
-  utter_location:
-  - text: Du findest {book} im 2. Stock.
+  utter_book_info:
+  - text: Das Buch {book} ist hier und kann ausgeliehen werden. Du findest es im 2. Stock.
+  utter_confirm_booksearch:
+  - text: Du suchst nach einem Buch, korrekt?
 actions: []
 forms: {}
 e2e_actions: []
