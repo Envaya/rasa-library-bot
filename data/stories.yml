@@ -40,7 +40,7 @@ stories:
   - action: utter_confirm_booksearch
   - intent: affirm
   - action: utter_ask_booktitle
-  - intent: utter_book_info
+  - intent: inform_book
     entities:
     - book: "Harry Potter"
   - action: utter_book_info

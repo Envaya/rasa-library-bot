@@ -23,6 +23,10 @@ intents:
     use_entities: true
 - inform_book_location:
     use_entities: true
+- utter_book_info:
+    use_entities: true
+- inform_book:
+    use_entities: true
 entities:
 - book
 slots:
