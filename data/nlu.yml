@@ -1,54 +1,5 @@
 version: "2.0"
-
 nlu:
-
-- lookup: media_type
-  examples: |
-    - Bilderbuecher
-    - Bilderbuech
-    - Wirtschaft
-    - Wirtschaftsbuecher
-    - Wirtschaftsbuch
-    - Lehrmittel
-    - Lehrmittel fuer Deutsch
-    - Lehrmittel Deutsch
-    - Lehrbücher fuer Deutsch
-    - Lehrbuch Deutsch
-    - deutsche Lehrmittel
-    - Unterrichtsbuecher Deutsch
-    - deutsche Unterrichtsbuecher
-    - Lehrmittel Mathematik
-    - Lehrmittel Technik
-    - Technik
-    - Wirtschaft
-    - Zeitschriften
-    - Magazine
-    - Uebersichtsplan
-
-- synonym: Bilderbuecher
-  examples: |
-    - Bilderbuech
-    - Bild Buch
-    - Bild Buecher
-    - Bilderbücher
-    - Bilderbüchern
-    - Bilderbuechern
-
-- synonym: Wirtschaft
-  examples: |
-    - Wirtschaftsbuecher
-    - Bild Buch
-    - Wirtschaftsbuch
-
-- synonym: Lehrmittel fuer Deutsch
-  examples: |
-    - Lehrmittel Deutsch
-    - Lehrbücher fuer Deutsch
-    - Lehrbuch Deutsch
-    - deutsche Lehrmittel
-    - Unterrichtsbuecher Deutsch
-    - deutsche Unterrichtsbuecher
-
 - intent: greet
   examples: |
     - hey
@@ -64,7 +15,6 @@ nlu:
     - gutenabend
     - abend
     - Guten Morgen
-
 - intent: goodbye
   examples: |
     - tschuess
@@ -72,7 +22,6 @@ nlu:
     - adieu
     - man sieht sich
     - danke
-
 - intent: affirm
   examples: |
     - ja
@@ -80,7 +29,6 @@ nlu:
     - so ist es
     - korrekt
     - jawohl
-
 - intent: deny
   examples: |
     - nein
@@ -88,7 +36,6 @@ nlu:
     - nee
     - nicht
     - no
-
 - intent: mood_great
   examples: |
     - super
@@ -96,19 +43,16 @@ nlu:
     - gut
     - fuehl mich gut
     - grossartig
-
 - intent: mood_unhappy
   examples: |
     - schrecklich
     - schlecht
     - sehr schlecht
     - traurig
-
 - intent: bot_challenge
   examples: |
     - Bist du ein Bot?
     - Bist du ein Mensch?
-
 - intent: search_book
   examples: |
     - Ich suche ein Buch
@@ -119,7 +63,6 @@ nlu:
     - Wo ist das Buch
     - Zeig mir wo das Buch ist
     - Gibt es das Buch
-
 - intent: inform_book
   examples: |
     - [chatbot technology](book)
@@ -132,16 +75,85 @@ nlu:
     - [Gespräch mit dem Betrunkenen](book)
     - [Der kleine Prinz](book)
     - [The Art of Writing](book)
-
 - intent: search_media_type
   examples: |
     - Zeig mir die Medienstandorte
     - Medienstandorte
-
+    - medienstandorte
 - intent: inform_media_type
   examples: |
     - [Bilderbuecher](media_type)
+    - Wo sind [Bild Buecher](media_type)
+    - Ich suche ein [Bilderbuch](media_type)
+    - [Bild Buecher](media_type)
+    - Ich suche nach [Bilderbuechern](media_type)
     - Ich suche nach [deutschen Lehrmittel](media_type)
     - Wo sind die [Bilderbuecher](media_type)
+    - [Lehrmittel fuer Deutsch](media_type)
+    - Ich suche nach [Lehrmittel Deutsch](media_type)
+    - [Lehrbuecher fuer Deutsch](media_type)
+    - Ich suche ein [Lehrbuch Deutsch](media_type)
+    - Wo finde ich [deutsche Lehrmittel](media_type)
+    - Ich suche nach [deutschen Lehrmitteln](media_type)
+    - [Unterrichtsbuecher Deutsch](media_type)
+    - [Unterrichtsbuecher für Deutsch](media_type)
+    - [deutsche Unterrichtsbuecher](media_type)
+    - [Deutsch](media_type)
+    - [Unterrichtsmaterial Deutsch](media_type)
     - Wo sind [Wirtschaftsbuecher](media_type)
     - Ich suche nach [Lehrmittel Mathematik](media_type)
+    - [unterrichtsbuecher für Deutsch](media_type)
+    - [deutsche Lehrbücher](media_type)
+- synonym: Bilderbuecher
+  examples: |
+    - Bilderbuech
+    - Bild Buecher
+    - Bilderbücher
+    - Bilderbüchern
+    - Bilderbuechern
+- synonym: Wirtschaft
+  examples: |
+    - Wirtschaftsbuecher
+    - Wirtschaftsbuch
+- synonym: Lehrmittel fuer Deutsch
+  examples: |
+    - Lehrmittel Deutsch
+    - Lehrbücher fuer Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - Unterrichtsbuecher Deutsch
+    - deutsche Unterrichtsbuecher
+    - Lehrbücher Deutsch
+    - unterrichtsbuecher für Deutsch
+    - deutsche Lehrbücher
+- lookup: media_type
+  examples: |
+    - Bilderbuch
+    - Bild Buch
+    - Bild Buecher
+    - Bilderbuecher
+    - Bilderbuechern
+    - Bilderbuecher
+    - Wirtschaft
+    - Wirtschaftsbuecher
+    - Wirtschaftsbuch
+    - Lehrmittel
+    - Lehrmittel fuer Deutsch
+    - Lehrmittel Deutsch
+    - Lehrbuecher fuer Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - deutschen Lehrmitteln
+    - Unterrichtsbuecher Deutsch
+    - Unterrichtsbuecher für Deutsch
+    - deutsche Unterrichtsbuecher
+    - Deutsch
+    - Unterrichtsmaterial Deutsch
+    - Lehrbücher Deutsch
+    - Lehrmittel Mathematik
+    - Lehrmittel Technik
+    - Technik
+    - Wirtschaft
+    - Zeitschriften
+    - Magazine
+    - Uebersichtsplan

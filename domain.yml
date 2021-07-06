@@ -5,37 +5,35 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-  - search_media_type:
-      use_entities: true
-  - inform_media_type:
-      use_entities: true
-  - greet:
-      use_entities: true
-  - goodbye:
-      use_entities: true
-  - affirm:
-      use_entities: true
-  - deny:
-      use_entities: true
-  - mood_great:
-      use_entities: true
-  - mood_unhappy:
-      use_entities: true
-  - bot_challenge:
-      use_entities: true
-  - search_book:
-      use_entities: true
-  - inform_book_location:
-      use_entities: true
-  - utter_book_info:
-      use_entities: true
-  - inform_book:
-      use_entities: true
-
+- search_media_type:
+    use_entities: true
+- inform_media_type:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- search_book:
+    use_entities: true
+- inform_book_location:
+    use_entities: true
+- utter_book_info:
+    use_entities: true
+- inform_book:
+    use_entities: true
 entities:
-  - book
-  - media_type
-
+- book
+- media_type
 slots:
   book:
     type: rasa.shared.core.slots.TextSlot
@@ -43,48 +41,48 @@ slots:
     auto_fill: true
     influence_conversation: true
   media_type:
-    type: categorical
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
     auto_fill: true
-    values:
-      - Bilderbuecher
-      - Lehrmittel
-      - Lehrmittel fuer Deutsch
-      - Lehrmittel fuer Mathematik
-      - Technik
-      - Wirtschaft
-      - Zeitschriften
-      - Uebersichtsplan
     influence_conversation: true
-
+    values:
+    - bilderbuecher
+    - lehrmittel
+    - lehrmittel fuer deutsch
+    - lehrmittel fuer mathematik
+    - technik
+    - wirtschaft
+    - zeitschriften
+    - uebersichtsplan
 responses:
   utter_greet:
-    - text: Hey! Wie gehts?
+  - text: Hey! Wie gehts?
   utter_cheer_up:
-    - image: https://i.imgur.com/nGF1K8f.jpg
-      text: 'Hier ist etwas fuer dich:'
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Hier ist etwas fuer dich:'
   utter_did_that_help:
-    - text: Hat das geholfen?
+  - text: Hat das geholfen?
   utter_happy:
-    - text: Super, mach weiter!
+  - text: Super, mach weiter!
   utter_goodbye:
-    - text: Auf Wiedersehen
+  - text: Auf Wiedersehen
   utter_iamabot:
-    - text: Ich bin ein Bot von Rasa.
+  - text: Ich bin ein Bot von Rasa.
   utter_services:
-    - text: Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
+  - text: Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
   utter_ask_booktitle:
-    - text: Welches Buch suchst du?
+  - text: Welches Buch suchst du?
   utter_book_info:
-    - text: Das Buch {book} ist hier und kann ausgeliehen werden. Du findest es im 2. Stock.
+  - text: Das Buch {book} ist hier und kann ausgeliehen werden. Du findest es im 2. Stock.
   utter_confirm_booksearch:
-    - text: Du suchst nach einem Buch, korrekt?
+  - text: Du suchst nach einem Buch, korrekt?
   utter_media_types:
-    - image: https://i.imgur.com/nGF1K8f.jpg
-      text: 'Du weisst nicht wo du suchen sollst? Ich kann dir die Standorte von verschiedenen Medien zeigen.'
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Du weisst nicht wo du suchen sollst? Ich kann dir die Standorte von verschiedenen Medien zeigen.
   utter_medienstandort_lehrmittel_deutsch:
-    - text: Deutsche Lehrmittel findest du im 1. Stock, im Westflügel.
+  - text: Deutsche Lehrmittel findest du im 1. Stock, im Westflügel.
   utter_medienstandort_bilderbuecher:
-    - text: Bilderbuecher findest du gleich links neben dem Eingang Stock.
-actions: [ ]
-forms: { }
-e2e_actions: [ ]
+  - text: Bilderbuecher findest du gleich links neben dem Eingang Stock.
+actions: []
+forms: {}
+e2e_actions: []
