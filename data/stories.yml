@@ -53,3 +53,36 @@ stories:
   - action: utter_confirm_booksearch
   - intent: deny
   - action: utter_services
+
+- story: medienstandorte lehrmittel deutsch
+  steps:
+  - intent: search_media_type
+  - action: utter_media_types
+  - intent: inform_media_type
+    entities:
+      - media_type: Lehrmittel fuer Deutsch
+  - slot_was_set:
+      - media_type: Lehrmittel fuer Deutsch
+  - action: utter_medienstandort_lehrmittel_deutsch
+
+- story: medienstandorte bilderbuecher
+  steps:
+  - intent: search_media_type
+  - action: utter_media_types
+  - intent: inform_media_type
+    entities:
+      - media_type: Bilderbuecher
+  - slot_was_set:
+      - media_type: Bilderbuecher
+  - action: utter_medienstandort_bilderbuecher
+
+- story: medienstandorte wirtschaft
+  steps:
+  - intent: search_media_type
+  - action: utter_media_types
+  - intent: inform_media_type
+    entities:
+      - media_type: Wirtschaft
+  - slot_was_set:
+      - media_type: Wirtschaft
+  - action: utter_medienstandort_bilderbuecher

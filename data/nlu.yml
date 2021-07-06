@@ -1,6 +1,54 @@
 version: "2.0"
 
 nlu:
+
+- lookup: media_type
+  examples: |
+    - Bilderbuecher
+    - Bilderbuech
+    - Wirtschaft
+    - Wirtschaftsbuecher
+    - Wirtschaftsbuch
+    - Lehrmittel
+    - Lehrmittel fuer Deutsch
+    - Lehrmittel Deutsch
+    - Lehrbücher fuer Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - Unterrichtsbuecher Deutsch
+    - deutsche Unterrichtsbuecher
+    - Lehrmittel Mathematik
+    - Lehrmittel Technik
+    - Technik
+    - Wirtschaft
+    - Zeitschriften
+    - Magazine
+    - Uebersichtsplan
+
+- synonym: Bilderbuecher
+  examples: |
+    - Bilderbuech
+    - Bild Buch
+    - Bild Buecher
+    - Bilderbücher
+    - Bilderbüchern
+    - Bilderbuechern
+
+- synonym: Wirtschaft
+  examples: |
+    - Wirtschaftsbuecher
+    - Bild Buch
+    - Wirtschaftsbuch
+
+- synonym: Lehrmittel fuer Deutsch
+  examples: |
+    - Lehrmittel Deutsch
+    - Lehrbücher fuer Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - Unterrichtsbuecher Deutsch
+    - deutsche Unterrichtsbuecher
+
 - intent: greet
   examples: |
     - hey
@@ -84,3 +132,16 @@ nlu:
     - [Gespräch mit dem Betrunkenen](book)
     - [Der kleine Prinz](book)
     - [The Art of Writing](book)
+
+- intent: search_media_type
+  examples: |
+    - Zeig mir die Medienstandorte
+    - Medienstandorte
+
+- intent: inform_media_type
+  examples: |
+    - [Bilderbuecher](media_type)
+    - Ich suche nach [deutschen Lehrmittel](media_type)
+    - Wo sind die [Bilderbuecher](media_type)
+    - Wo sind [Wirtschaftsbuecher](media_type)
+    - Ich suche nach [Lehrmittel Mathematik](media_type)
