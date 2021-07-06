@@ -1,12 +1,1 @@
 version: "2.0"
-
-rules:
-  - rule: Say goodbye anytime the user says goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-  - rule: Repeat name anytime the user says it's name
-    steps:
-      - intent: introduce
-      - action: utter_greet
