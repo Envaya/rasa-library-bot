@@ -1,0 +1,223 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hallo
+    - hi
+    - hallo du
+    - guten morgen
+    - guten abend
+    - moin
+    - hoi
+    - ciao
+    - gutenmorgen
+    - gutenabend
+    - abend
+    - Guten Morgen
+- intent: goodbye
+  examples: |
+    - tschuess
+    - ciao
+    - adieu
+    - man sieht sich
+    - danke
+- intent: affirm
+  examples: |
+    - ja
+    - genau
+    - so ist es
+    - korrekt
+    - jawohl
+- intent: deny
+  examples: |
+    - nein
+    - ne
+    - nee
+    - nicht
+    - no
+- intent: mood_great
+  examples: |
+    - super
+    - perfekt
+    - gut
+    - fuehl mich gut
+    - grossartig
+- intent: mood_unhappy
+  examples: |
+    - schrecklich
+    - schlecht
+    - sehr schlecht
+    - traurig
+- intent: bot_challenge
+  examples: |
+    - Bist du ein Bot?
+    - Bist du ein Mensch?
+- intent: search_book
+  examples: |
+    - Ich suche ein Buch
+    - Buch
+    - Ich suche [chatbot technology](book)
+    - Wo ist [chatbot technology](book)
+    - Ich möchte ein Buch ausleihen
+    - Wo ist das Buch
+    - Zeig mir wo das Buch ist
+    - Gibt es das Buch
+- intent: inform_book
+  examples: |
+    - [chatbot technology](book)
+    - [Bibel](book)
+    - [The design of future things](book)
+    - Ich suche [Harry Potter](book)
+    - [Herr der Ringe](book)
+    - [Andersens Märchen](book)
+    - [Das Urteil](book)
+    - [Gespräch mit dem Betrunkenen](book)
+    - [Der kleine Prinz](book)
+    - [The Art of Writing](book)
+- intent: search_media_type
+  examples: |
+    - Zeig mir die Medienstandorte
+    - Medienstandorte
+    - medienstandorte
+- intent: inform_media_type
+  examples: |
+    - [Bilderbücher](media_type)
+    - Wo sind [Bild Bücher](media_type)
+    - Ich suche ein [Bilderbuch](media_type)
+    - Ich suche ein [deutsches Lehrmittel](media_type)
+    - [Bild Bücher](media_type)
+    - Ich suche nach [Bilderbüchern](media_type)
+    - Ich suche nach [deutschen Lehrmittel](media_type)
+    - Ich suche nach [deutschen Lehrmitteln](media_type)
+    - Wo sind die [Bilderbücher](media_type)
+    - [Lehrmittel für Deutsch](media_type)
+    - Ich suche nach [Lehrmittel Deutsch](media_type)
+    - [Lehrbücher für Deutsch](media_type)
+    - Ich suche ein [Lehrbuch Deutsch](media_type)
+    - Wo finde ich [deutsche Lehrmittel](media_type)
+    - Ich suche nach [deutschen Lehrmitteln](media_type)
+    - [Unterrichtsbücher Deutsch](media_type)
+    - [Unterrichtsbücher für Deutsch](media_type)
+    - [deutsche Unterrichtsbücher](media_type)
+    - [Deutsch](media_type)
+    - [Unterrichtsmaterial Deutsch](media_type)
+    - Wo sind [Wirtschaftsbücher](media_type)
+    - Ich suche nach [Lehrmittel Mathematik](media_type)
+    - [unterrichtsbücher für Deutsch](media_type)
+    - [deutsche Lehrbücher](media_type)
+- synonym: Bilderbücher
+  examples: |
+    - Bilderbuch
+    - Bild Bücher
+    - Bilderbücher
+    - Bilderbüchern
+    - Bilderbüchern
+- synonym: Wirtschaft
+  examples: |
+    - Wirtschaftsbücher
+    - Wirtschaftsbuch
+- synonym: Lehrmittel für Deutsch
+  examples: |
+    - Lehrmittel Deutsch
+    - Lehrbücher für Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - Unterrichtsbücher Deutsch
+    - deutsche Unterrichtsbücher
+    - Lehrbücher Deutsch
+    - unterrichtsbücher für Deutsch
+    - deutsche Lehrbücher
+    - deutsches Lehrmittel
+    - deutsche Lehrmittel
+    - deutschen Lehrmitteln
+    - deutschen Lehrbüchern
+    - Lehrbüchern für Deutsch
+- synonym: Lehrmittel für Mathematik
+  examples: |
+    - Lehrmittel Mathematik
+    - Lehrmittel für Mathematik
+    - Lehrmittel Mathe
+    - Lehrbücher Mathematik
+    - Lehrbücher für Mathematik
+    - Lehrbücher Mathe
+    - Lehrbuch Mathematik
+    - Lehrbuch für Mathematik
+    - Lehrbuch Mathe
+    - mathematische Lehrmittel
+    - Mathe Lehrmittel
+    - Unterrichtsbücher Mathematik
+    - Unterrichtsbücher für Mathematik
+    - Unterrichtsbücher Mathe
+    - Unterrichtsmaterial Mathematik
+    - Unterrichtsmaterial für Mathematik
+    - Unterrichtsmaterial Mathe
+    - Lehrbüchern für Mathematik
+    - Lehrmitteln für Mathematik
+    - Unterrichtsmaterialien für Mathematik
+    - Lehrmittel Rechnen
+    - Lehrmittel für Rechnen
+    - Lehrbücher Rechnen
+    - Unterrichtsbücher Rechnen
+    - Mathematik
+- lookup: media_type
+  examples: |
+    - Bilderbuch
+    - Bild Buch
+    - Bild Bücher
+    - Bilderbücher
+    - Bilderbüchern
+    - Bilderbücher
+    - Wirtschaft
+    - Wirtschaftsbücher
+    - Wirtschaftsbuch
+    - Lehrmittel
+    - Lehrmittel für Deutsch
+    - Lehrmittel Deutsch
+    - Lehrbücher für Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - deutschen Lehrmitteln
+    - Unterrichtsbücher Deutsch
+    - Unterrichtsbücher für Deutsch
+    - deutsche Unterrichtsbücher
+    - Deutsch
+    - Unterrichtsmaterial Deutsch
+    - Lehrbücher Deutsch
+    - Lehrmittel Mathematik
+    - Lehrmittel Technik
+    - Technik
+    - Wirtschaft
+    - Zeitschriften
+    - Magazine
+    - Übersichtsplan
+    - deutsches Lehrmittel
+    - deutsche Lehrmittel
+    - deutschen Lehrmitteln
+    - deutschen Lehrbüchern
+    - Lehrbüchern für Deutsch
+    - Lehrmittel Mathematik
+    - Lehrmittel für Mathematik
+    - Lehrmittel Mathe
+    - Lehrbücher Mathematik
+    - Lehrbücher für Mathematik
+    - Lehrbücher Mathe
+    - Lehrbuch Mathematik
+    - Lehrbuch für Mathematik
+    - Lehrbuch Mathe
+    - mathematische Lehrmittel
+    - Mathe Lehrmittel
+    - Unterrichtsbücher Mathematik
+    - Unterrichtsbücher für Mathematik
+    - Unterrichtsbücher Mathe
+    - Unterrichtsmaterial Mathematik
+    - Unterrichtsmaterial für Mathematik
+    - Unterrichtsmaterial Mathe
+    - Lehrbüchern für Mathematik
+    - Lehrmitteln für Mathematik
+    - Unterrichtsmaterialien für Mathematik
+    - Lehrmittel Rechnen
+    - Lehrmittel für Rechnen
+    - Lehrbücher Rechnen
+    - Unterrichtsbücher Rechnen
+    - Mathematik
