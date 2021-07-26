@@ -23,7 +23,7 @@ pipeline:
 
 # other components
   - name: FallbackClassifier
-    threshold: 0.6
+    threshold: 0.7
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
