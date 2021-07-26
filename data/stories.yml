@@ -2,33 +2,6 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
 - story: intro
   steps:
   - intent: greet
@@ -60,9 +33,9 @@ stories:
   - action: utter_media_types
   - intent: inform_media_type
     entities:
-      - media_type: Lehrmittel fuer Deutsch
+      - media_type: Lehrmittel für Deutsch
   - slot_was_set:
-      - media_type: Lehrmittel fuer Deutsch
+      - media_type: Lehrmittel für Deutsch
   - action: utter_medienstandort_lehrmittel_deutsch
 
 - story: medienstandorte bilderbuecher
@@ -71,10 +44,21 @@ stories:
   - action: utter_media_types
   - intent: inform_media_type
     entities:
-      - media_type: Bilderbuecher
+      - media_type: Bilderbücher
   - slot_was_set:
-      - media_type: Bilderbuecher
+      - media_type: Bilderbücher
   - action: utter_medienstandort_bilderbuecher
+
+- story: medienstandorte lehrmittel mathematik
+  steps:
+  - intent: search_media_type
+  - action: utter_media_types
+  - intent: inform_media_type
+    entities:
+      - media_type: Lehrmittel für Mathematik
+  - slot_was_set:
+      - media_type: Lehrmittel für Mathematik
+  - action: utter_medienstandort_lehrmittel_mathematik
 
 - story: medienstandorte wirtschaft
   steps:

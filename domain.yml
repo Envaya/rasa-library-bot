@@ -17,10 +17,6 @@ intents:
     use_entities: true
 - deny:
     use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
 - bot_challenge:
     use_entities: true
 - search_book:
@@ -31,39 +27,35 @@ intents:
     use_entities: true
 - inform_book:
     use_entities: true
+- nlu_fallback:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
 entities:
 - book
 - media_type
 slots:
-  book:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
   media_type:
     type: rasa.shared.core.slots.CategoricalSlot
     initial_value: null
     auto_fill: true
     influence_conversation: true
     values:
-    - bilderbuecher
+    - bilderbücher
     - lehrmittel
-    - lehrmittel fuer deutsch
-    - lehrmittel fuer mathematik
+    - lehrmittel für deutsch
+    - lehrmittel für mathematik
     - technik
     - wirtschaft
     - zeitschriften
-    - uebersichtsplan
+    - übersichtsplan
 responses:
+  utter_please_rephrase:
+  - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_greet:
   - text: Hey! Wie gehts?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Hier ist etwas fuer dich:'
-  utter_did_that_help:
-  - text: Hat das geholfen?
-  utter_happy:
-  - text: Super, mach weiter!
   utter_goodbye:
   - text: Auf Wiedersehen
   utter_iamabot:
@@ -77,12 +69,17 @@ responses:
   utter_confirm_booksearch:
   - text: Du suchst nach einem Buch, korrekt?
   utter_media_types:
-  - image: https://i.imgur.com/nGF1K8f.jpg
+  - image: https://i.imgur.com/ttLhlF9.jpg
     text: Du weisst nicht wo du suchen sollst? Ich kann dir die Standorte von verschiedenen Medien zeigen.
   utter_medienstandort_lehrmittel_deutsch:
-  - text: Deutsche Lehrmittel findest du im 1. Stock, im Westflügel.
+  - image: https://i.imgur.com/E8DZALb.jpg
+    text: Deutsche Lehrmittel findest du im 1. Stock, im Westflügel.
+  utter_medienstandort_lehrmittel_mathematik:
+  - image: https://i.imgur.com/m50twB0.jpg
+    text: Lehrmittel Mathematik findest du im 2. Stock neben der Treppe.
   utter_medienstandort_bilderbuecher:
-  - text: Bilderbuecher findest du gleich links neben dem Eingang Stock.
+  - image: https://i.imgur.com/NC6LrRv.jpg
+    text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
 actions: []
 forms: {}
 e2e_actions: []

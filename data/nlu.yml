@@ -82,78 +82,77 @@ nlu:
     - medienstandorte
 - intent: inform_media_type
   examples: |
-    - [Bilderbuecher](media_type)
-    - Wo sind [Bild Buecher](media_type)
+    - [Bilderbücher](media_type)
+    - Wo sind [Bild Bücher](media_type)
     - Ich suche ein [Bilderbuch](media_type)
-    - [Bild Buecher](media_type)
-    - Ich suche nach [Bilderbuechern](media_type)
+    - Ich suche ein [deutsches Lehrmittel](media_type)
+    - [Bild Bücher](media_type)
+    - Ich suche nach [Bilderbüchern](media_type)
     - Ich suche nach [deutschen Lehrmittel](media_type)
-    - Wo sind die [Bilderbuecher](media_type)
-    - [Lehrmittel fuer Deutsch](media_type)
+    - Ich suche nach [deutschen Lehrmitteln](media_type)
+    - Wo sind die [Bilderbücher](media_type)
+    - [Lehrmittel für Deutsch](media_type)
     - Ich suche nach [Lehrmittel Deutsch](media_type)
-    - [Lehrbuecher fuer Deutsch](media_type)
+    - [Lehrbücher für Deutsch](media_type)
     - Ich suche ein [Lehrbuch Deutsch](media_type)
     - Wo finde ich [deutsche Lehrmittel](media_type)
-    - Ich suche nach [deutschen Lehrmitteln](media_type)
-    - [Unterrichtsbuecher Deutsch](media_type)
-    - [Unterrichtsbuecher für Deutsch](media_type)
-    - [deutsche Unterrichtsbuecher](media_type)
+    - [Unterrichtsbücher Deutsch](media_type)
+    - [Unterrichtsbücher für Deutsch](media_type)
+    - [deutsche Unterrichtsbücher](media_type)
     - [Deutsch](media_type)
     - [Unterrichtsmaterial Deutsch](media_type)
-    - Wo sind [Wirtschaftsbuecher](media_type)
+    - Wo sind [Wirtschaftsbücher](media_type)
     - Ich suche nach [Lehrmittel Mathematik](media_type)
-    - [unterrichtsbuecher für Deutsch](media_type)
+    - [unterrichtsbücher für Deutsch](media_type)
     - [deutsche Lehrbücher](media_type)
-- synonym: Bilderbuecher
-  examples: |
-    - Bilderbuech
-    - Bild Buecher
-    - Bilderbücher
-    - Bilderbüchern
-    - Bilderbuechern
-- synonym: Wirtschaft
-  examples: |
-    - Wirtschaftsbuecher
-    - Wirtschaftsbuch
-- synonym: Lehrmittel fuer Deutsch
-  examples: |
-    - Lehrmittel Deutsch
-    - Lehrbücher fuer Deutsch
-    - Lehrbuch Deutsch
-    - deutsche Lehrmittel
-    - Unterrichtsbuecher Deutsch
-    - deutsche Unterrichtsbuecher
-    - Lehrbücher Deutsch
-    - unterrichtsbuecher für Deutsch
-    - deutsche Lehrbücher
-- lookup: media_type
+    - ich suche nach [Unterrichtsmaterial für Mathe](media_type)
+- synonym: Bilderbücher
   examples: |
     - Bilderbuch
-    - Bild Buch
-    - Bild Buecher
-    - Bilderbuecher
-    - Bilderbuechern
-    - Bilderbuecher
-    - Wirtschaft
-    - Wirtschaftsbuecher
+    - Bild Bücher
+    - Bilderbüchern
+- synonym: Wirtschaft
+  examples: |
+    - Wirtschaftsbücher
     - Wirtschaftsbuch
-    - Lehrmittel
-    - Lehrmittel fuer Deutsch
+- synonym: Lehrmittel für Deutsch
+  examples: |
     - Lehrmittel Deutsch
-    - Lehrbuecher fuer Deutsch
+    - Lehrbücher für Deutsch
     - Lehrbuch Deutsch
     - deutsche Lehrmittel
-    - deutschen Lehrmitteln
-    - Unterrichtsbuecher Deutsch
-    - Unterrichtsbuecher für Deutsch
-    - deutsche Unterrichtsbuecher
-    - Deutsch
-    - Unterrichtsmaterial Deutsch
+    - Unterrichtsbücher Deutsch
+    - deutsche Unterrichtsbücher
     - Lehrbücher Deutsch
+    - unterrichtsbücher für Deutsch
+    - deutsche Lehrbücher
+    - deutsches Lehrmittel
+    - deutschen Lehrmitteln
+    - deutschen Lehrbüchern
+    - Lehrbüchern für Deutsch
+- synonym: Lehrmittel für Mathematik
+  examples: |
+    - Mathe Lehrmittel
+    - Lehrmittel Mathe
     - Lehrmittel Mathematik
-    - Lehrmittel Technik
-    - Technik
-    - Wirtschaft
-    - Zeitschriften
-    - Magazine
-    - Uebersichtsplan
+    - Unterrichtsbücher Mathematik
+    - Unterrichtsbücher für Mathematik
+    - Unterrichtsbücher Mathe
+    - Unterrichtbuch Mathematik
+    - Unterrichtsbuch für Mathematik
+    - Unterrichtsbuch Mathe
+    - Unterrichtsmaterial Mathematik
+    - Unterrichtsmaterial für Mathematik
+    - Unterrichtsmaterial Mathe
+    - Lehrmitteln für Mathematik
+    - Unterrichtsmaterialien für Mathematik
+    - Lehrmittel Rechnen
+    - Rechnen Lehrmittel
+    - Rechen Lehrmittel
+    - Lehrmittel für Rechnen
+    - Unterrichtsbücher Rechnen
+    - Mathematik
+    - Mathematik Lehrmittel
+    - Mathe
+    - Rechnen
+    - Unterrichtsmaterial für Mathe

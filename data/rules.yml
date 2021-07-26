@@ -1,1 +1,6 @@
 version: "2.0"
+rules:
+- rule: Bitte den User die Anfrage anders zu stellen wann immer die Anfrage eine NLU Confidence von unter 0.6 hat
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
