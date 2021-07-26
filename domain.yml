@@ -33,6 +33,8 @@ intents:
     use_entities: true
 - mood_unhappy:
     use_entities: true
+- ask_time:
+    use_entities: true
 entities:
 - book
 - media_type
@@ -80,6 +82,7 @@ responses:
   utter_medienstandort_bilderbuecher:
   - image: https://i.imgur.com/NC6LrRv.jpg
     text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
-actions: []
+actions:
+  - action_show_time
 forms: {}
 e2e_actions: []

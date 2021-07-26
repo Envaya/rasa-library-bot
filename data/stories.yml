@@ -70,3 +70,8 @@ stories:
   - slot_was_set:
       - media_type: Wirtschaft
   - action: utter_medienstandort_bilderbuecher
+
+- story: path ask time
+  steps:
+  - intent: ask_time
+  - action: action_show_time
