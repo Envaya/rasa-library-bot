@@ -1,0 +1,785 @@
+2021-07-26 11:47:18,352 [DEBUG]  Environment variable `RASA_X_HOST ` is not set, defaulting to 'http://localhost:5002'. 
+2021-07-26 11:47:18,945 [DEBUG]  'docker-local/endpoints.yml' not found. Using default location 'endpoints.yml' instead.
+2021-07-26 11:47:19,081 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:47:20,060 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:47:20,188 [DEBUG]  Popen(['git', 'version'], cwd=/root, universal_newlines=False, shell=None, istream=None)
+2021-07-26 11:47:20,197 [DEBUG]  Popen(['git', 'version'], cwd=/root, universal_newlines=False, shell=None, istream=None)
+2021-07-26 11:47:20,296 [DEBUG]  Generating JWT RSA key pair.
+2021-07-26 11:47:20,311 [DEBUG]  Started consuming telemetry events.
+2021-07-26 11:47:20,570 [DEBUG]  Saved RSA private key to temporary file '/tmp/tmp4zlgnw91'.
+2021-07-26 11:47:20,648 [DEBUG]  validating provided secret
+2021-07-26 11:47:20,650 [DEBUG]  validating keys (if needed)
+2021-07-26 11:47:20,652 [DEBUG]  loading secret and/or keys (if needed)
+2021-07-26 11:47:20,654 [DEBUG]  Start running schema migrations.
+2021-07-26 11:47:20,672 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:20,706 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:20,709 [DEBUG]  Turned SQLite foreign key enforcement off.
+2021-07-26 11:47:20,710 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:20,806 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:20,807 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:20,812 [DEBUG]  Schema migrations finished.
+2021-07-26 11:47:20,910 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:20,933 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:20,949 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:20,993 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:21,009 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:21,047 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:21,069 [DEBUG]  Found existing system system user 'system_user'.
+2021-07-26 11:47:21,083 [DEBUG]  Found user: 'me'.
+2021-07-26 11:47:21,093 [DEBUG]  Updated password for user 'me' to 'Foe4kA0QxbcU'.
+2021-07-26 11:47:21,316 [DEBUG]  {'language': 'de', 'pipeline': [{'name': 'SpacyNLP', 'model': 'de_dep_news_trf'}, {'name': 'SpacyTokenizer'}, {'name': 'SpacyFeaturizer'}, {'name': 'RegexFeaturizer'}, {'name': 'LexicalSyntacticFeaturizer'}, {'name': 'CountVectorsFeaturizer'}, {'name': 'CountVectorsFeaturizer', 'analyzer': 'char_wb', 'min_ngram': 1, 'max_ngram': 4}, {'name': 'DIETClassifier', 'epochs': 100}, {'name': 'EntitySynonymMapper'}, {'name': 'ResponseSelector', 'epochs': 100}, {'name': 'FallbackClassifier', 'threshold': 0.6}], 'policies': None}
+2021-07-26 11:47:21,320 [DEBUG]  Loaded local configuration from '/root/config.yml' into database
+2021-07-26 11:47:21,332 [DEBUG]  Training data format of 'data/nlu.yml' is 'rasa_yml'.
+2021-07-26 11:47:21,342 [DEBUG]  Training data format of 'data/rules.yml' is 'unk'.
+2021-07-26 11:47:21,351 [DEBUG]  Training data format of 'data/stories.yml' is 'unk'.
+2021-07-26 11:47:21,370 [DEBUG]  Injecting stories from file 'data/rules.yml' to database (test stories: False).
+2021-07-26 11:47:21,412 [DEBUG]  Injecting stories from file 'data/stories.yml' to database (test stories: False).
+2021-07-26 11:47:21,616 [DEBUG]  Actions '['action_show_time']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,619 [DEBUG]  Slots '['media_type']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,621 [DEBUG]  Intents '['affirm', 'inform_media_type', 'ask_time', 'nlu_fallback', 'goodbye', 'deny', 'search_media_type', 'greet', 'search_book', 'inform_book']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,624 [DEBUG]  Entities '['media_type', 'book']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,631 [DEBUG]  Injecting stories from file 'tests/test_stories.yml' to database (test stories: True).
+2021-07-26 11:47:21,672 [INFO ]  The 'version' key is missing in the training data file /tmp/tmp46zccbad. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2021-07-26 11:47:21,771 [DEBUG]  Actions '['action_show_time']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,773 [DEBUG]  Slots '['media_type']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,775 [DEBUG]  Intents '['affirm', 'inform_media_type', 'ask_time', 'nlu_fallback', 'goodbye', 'deny', 'search_media_type', 'greet', 'search_book', 'inform_book']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,777 [DEBUG]  Entities '['media_type', 'book']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:21,781 [DEBUG]  Injected 9 Core stories.
+2021-07-26 11:47:21,782 [DEBUG]  Injected 2 test stories.
+2021-07-26 11:47:21,828 [DEBUG]  Injecting NLU data from file 'data/nlu.yml' to database.
+2021-07-26 11:47:21,835 [DEBUG]  Training data format of 'data/nlu.yml' is 'rasa_yml'.
+2021-07-26 11:47:22,165 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:22,191 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:22,244 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:47:22,315 [DEBUG]  Intents '['greet', 'goodbye', 'affirm', 'deny', 'mood_great', 'mood_unhappy', 'bot_challenge', 'search_book', 'inform_book', 'search_media_type', 'inform_media_type', 'ask_time']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:22,318 [DEBUG]  Entities '['book', 'media_type']' are already contained in domain for project_id 'default'.
+2021-07-26 11:47:22,323 [DEBUG]  Injected 88 NLU training data examples.
+2021-07-26 11:47:22,326 [WARNI]  No local evaluation result files found.
+2021-07-26 11:47:22,368 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:47:22,370 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:47:22,436 [DEBUG]  Cache miss, executed SQL query: SELECT conversation.sender_id, conversation.number_user_messages, conversation.latest_input_channel, conversation.latest_event_time, conversation.in_training_data, conversation.review_status, conversation.minimum_action_confidence, conversation.maximum_action_confidence, conversation.minimum_intent_confidence, conversation.maximum_intent_confidence, conversation.evaluation, conversation.interactive, conversation.created_by 
+FROM conversation; Query result: 50
+2021-07-26 11:47:22,443 [DEBUG]  Cache miss, executed SQL query: SELECT conversation_event.id, conversation_event.conversation_id, conversation_event.type_name, conversation_event.timestamp, conversation_event.intent_name, conversation_event.action_name, conversation_event.slot_name, conversation_event.slot_value, conversation_event.policy, conversation_event.is_flagged, conversation_event.data, conversation_event.evaluation, conversation_event.rasa_environment 
+FROM conversation_event; Query result: 682
+2021-07-26 11:47:22,598 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:22,600 [INFO ]  Starting event service (standalone: False).
+2021-07-26 11:47:22,642 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:22,646 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2021-07-26 11:47:22,659 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:22,682 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:22,701 [DEBUG]  Scheduled telemetry.
+2021-07-26 11:47:22,725 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:47:22,741 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:47:22,742 [INFO ]  Start consuming SQLite events from database 'events.db'.
+2021-07-26 11:47:22,753 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:22,789 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:23,313 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:47:23,325 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:47:24,304 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:47:27,221 [DEBUG]  Model discovery completed.
+2021-07-26 11:47:27,235 [INFO ]  Goin' Fast @ http://0.0.0.0:5002
+2021-07-26 11:47:27,246 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:47:27,265 [INFO ]  Starting worker [1]
+2021-07-26 11:47:27,416 [DEBUG]  Model discovery completed.
+2021-07-26 11:47:27,422 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:47:27,446 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:47:28,618 [DEBUG]  ('Signature verification failed',)
+2021-07-26 11:47:28,620 [DEBUG]  ('Signature verification failed',)
+2021-07-26 11:48:02,395 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:02,401 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:02,433 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:03,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:03,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:03,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:05,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:05,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:05,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:07,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:07,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:07,434 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:09,401 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:09,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:09,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:11,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:11,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:11,439 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:13,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:13,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:13,423 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:15,407 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:15,414 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:15,474 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:15,612 [DEBUG]  Answered 404 with index.html. Request url '/': 'http://localhost:5002/favicon.ico'
+2021-07-26 11:48:17,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:17,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:17,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:19,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:19,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:19,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:21,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:21,411 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:21,442 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:23,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:23,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:23,433 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:25,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:25,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:25,435 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:27,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:27,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:27,424 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:29,389 [DEBUG]  Answered 404 with index.html. Request url '/': 'http://localhost:5002/login?username=me&password=Foe4kA0QxbcU'
+2021-07-26 11:48:29,410 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:29,421 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:29,459 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:29,959 [DEBUG]  New websocket connected.
+2021-07-26 11:48:29,982 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,017 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,346 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,383 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,399 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,408 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,453 [DEBUG]  Cache miss, executed SQL query: SELECT message_log.id, message_log.hash, message_log.model, message_log.archived, message_log.time, message_log.text, message_log.intent, message_log.confidence, message_log.intent_ranking, message_log.entities, message_log.in_training_data, message_log.workspace_id, message_log.event_id, message_log.conversation_id 
+FROM message_log 
+WHERE message_log.workspace_id IS NULL AND message_log.archived = false AND message_log.in_training_data = false; Query result: 40
+2021-07-26 11:48:30,506 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,516 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,542 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,553 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,623 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,635 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,661 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,672 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,701 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:48:30,721 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,737 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,767 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,776 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,795 [DEBUG]  Rasa X will use <class 'rasax.community.caches.stub_cache.StubCache'> for caching queries.
+2021-07-26 11:48:30,814 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,846 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,874 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,881 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,898 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,905 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,935 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:30,945 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:30,979 [DEBUG]  Cache miss, executed SQL query: SELECT conversation.sender_id, conversation.number_user_messages, conversation.latest_input_channel, conversation.latest_event_time, conversation.in_training_data, conversation.review_status, conversation.minimum_action_confidence, conversation.maximum_action_confidence, conversation.minimum_intent_confidence, conversation.maximum_intent_confidence, conversation.evaluation, conversation.interactive, conversation.created_by 
+FROM conversation 
+WHERE conversation.number_user_messages >= :number_user_messages_1; Query result: 31
+2021-07-26 11:48:31,091 [DEBUG]  Error when retrieving version from Rasa Open Source. Cannot connect to host stuff:5005 ssl:default [Name or service not known]
+2021-07-26 11:48:31,099 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,112 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,131 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,141 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,177 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,184 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,218 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,228 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,252 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:48:31,257 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,270 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,348 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,372 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,445 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,455 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,500 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:31,504 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,512 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,520 [DEBUG]  Authenticated websocket connection with user 'me'.
+2021-07-26 11:48:31,535 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,553 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,654 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,662 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:31,683 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:31,692 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:32,202 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:32,221 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:32,241 [DEBUG]  Error when retrieving version from Rasa Open Source. Cannot connect to host stuff:5005 ssl:default [Name or service not known]
+2021-07-26 11:48:32,317 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:48:32,909 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:32,934 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:32,945 [DEBUG]  Error when retrieving version from Rasa Open Source. Cannot connect to host stuff:5005 ssl:default [Name or service not known]
+2021-07-26 11:48:33,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:33,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:33,417 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:34,684 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:34,709 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:35,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:35,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:35,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:36,761 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:36,798 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:36,816 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:36,817 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:48:36,880 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:36,901 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:36,934 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:36,963 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:36,997 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,018 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,028 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,094 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,104 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,161 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300117.1212883, "name": "action_session_start", "policy": null, "confidence": 1.0, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:48:37,167 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,190 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,250 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300117.1212883, "name": "action_session_start", "policy": null, "confidence": 1.0, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:48:37,436 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:37,460 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,463 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,516 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,518 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,525 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "session_started", "timestamp": 1627300117.121487}'
+2021-07-26 11:48:37,533 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,535 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,563 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,582 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,601 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,605 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "session_started", "timestamp": 1627300117.121487}'
+2021-07-26 11:48:37,621 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,670 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,720 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,733 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,753 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,755 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300117.1215804, "name": "action_listen", "policy": null, "confidence": null, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:48:37,758 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,759 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:48:37,783 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,824 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,833 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,856 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300117.1215804, "name": "action_listen", "policy": null, "confidence": null, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:48:37,904 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:37,966 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:37,967 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:38,003 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:39,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:39,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:39,437 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:41,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:41,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:41,435 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:41,741 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:41,772 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:43,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:43,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:43,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:44,781 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:44,802 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:45,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:45,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:45,439 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:47,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:47,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:47,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:48,098 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:48,125 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:49,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:49,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:49,426 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:51,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:51,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:51,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:51,505 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:51,524 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:53,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:53,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:53,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:54,648 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:54,668 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:55,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:55,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:55,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:57,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:57,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:57,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:57,706 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:57,737 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:48:59,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:48:59,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:48:59,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:00,774 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:00,796 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:01,215 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:01,237 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:01,249 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:01,254 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:01,278 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:01,286 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:01,295 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:01,302 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:01,332 [DEBUG]  Error when retrieving version from Rasa Open Source. Cannot connect to host stuff:5005 ssl:default [Name or service not known]
+2021-07-26 11:49:01,401 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:01,403 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:01,410 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:02,733 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user", "timestamp": 1627300142.671581, "text": "hallo", "parse_data": {"intent": {"id": 8946181157041706534, "name": "greet", "confidence": 0.9992191791534424}, "entities": [], "text": "hallo", "message_id": "0f6119e551c341b18e2fc9bef40e14c8", "metadata": {}, "intent_ranking": [{"id": 8946181157041706534, "name": "greet", "confidence": 0.9992191791534424}, {"id": 1166395643001572550, "name": "mood_great", "confidence": 0.0003030126099474728}, {"id": -6813395930571478022, "name": "inform_media_type", "confidence": 0.00011978467227891088}, {"id": -7168744945095549391, "name": "inform_book", "confidence": 9.620462515158579e-05}, {"id": 9044792856222867167, "name": "affirm", "confidence": 6.727486470481381e-05}, {"id": 93817427706749000, "name": "bot_challenge", "confidence": 5.816909470013343e-05}, {"id": -7182899181972749166, "name": "mood_unhappy", "confidence": 3.632912194007076e-05}, {"id": 3846343314885716587, "name": "search_media_type", "confidence": 3.612828004406765e-05}, {"id": -4923806177826417307, "name": "goodbye", "confidence": 3.6128210922470316e-05}, {"id": -6937548869446156231, "name": "search_book", "confidence": 2.775390021270141e-05}], "response_selector": {"all_retrieval_intents": [], "default": {"response": {"id": null, "responses": null, "response_templates": null, "confidence": 0.0, "intent_response_key": null, "utter_action": "utter_None", "template_name": "utter_None"}, "ranking": []}}}, "input_channel": "rasa", "message_id": "0f6119e551c341b18e2fc9bef40e14c8", "metadata": {}}'
+2021-07-26 11:49:02,737 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:02,752 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:02,770 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:49:02,784 [DEBUG]  Could not find a model in the supplied NLU parse data. Will try to associate the message log with the current production model instead.
+2021-07-26 11:49:02,786 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:02,815 [DEBUG]  Saving to NLU logs:
+<rasax.community.database.conversation.MessageLog object at 0x7f6c260ffa60>
+2021-07-26 11:49:02,817 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user", "timestamp": 1627300142.671581, "text": "hallo", "parse_data": {"intent": {"id": 8946181157041706534, "name": "greet", "confidence": 0.9992191791534424}, "entities": [], "text": "hallo", "message_id": "0f6119e551c341b18e2fc9bef40e14c8", "metadata": {}, "intent_ranking": [{"id": 8946181157041706534, "name": "greet", "confidence": 0.9992191791534424}, {"id": 1166395643001572550, "name": "mood_great", "confidence": 0.0003030126099474728}, {"id": -6813395930571478022, "name": "inform_media_type", "confidence": 0.00011978467227891088}, {"id": -7168744945095549391, "name": "inform_book", "confidence": 9.620462515158579e-05}, {"id": 9044792856222867167, "name": "affirm", "confidence": 6.727486470481381e-05}, {"id": 93817427706749000, "name": "bot_challenge", "confidence": 5.816909470013343e-05}, {"id": -7182899181972749166, "name": "mood_unhappy", "confidence": 3.632912194007076e-05}, {"id": 3846343314885716587, "name": "search_media_type", "confidence": 3.612828004406765e-05}, {"id": -4923806177826417307, "name": "goodbye", "confidence": 3.6128210922470316e-05}, {"id": -6937548869446156231, "name": "search_book", "confidence": 2.775390021270141e-05}], "response_selector": {"all_retrieval_intents": [], "default": {"response": {"id": null, "responses": null, "response_templates": null, "confidence": 0.0, "intent_response_key": null, "utter_action": "utter_None", "template_name": "utter_None"}, "ranking": []}}}, "input_channel": "rasa", "message_id": "0f6119e551c341b18e2fc9bef40e14c8", "metadata": {}}'
+2021-07-26 11:49:02,841 [DEBUG]  Broadcasting message: {'topic': 'messages', 'name': 'message_sent', 'data': {'channel': 'rasa'}, 'recipient_id': 'ALL', 'scopes': None}
+2021-07-26 11:49:02,906 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:02,986 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:02,990 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,030 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,033 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user_featurization", "timestamp": 1627300142.6871748, "use_text_for_featurization": false}'
+2021-07-26 11:49:03,049 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,106 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,135 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,141 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,145 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user_featurization", "timestamp": 1627300142.6871748, "use_text_for_featurization": false}'
+2021-07-26 11:49:03,210 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,263 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,267 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300142.6872127, "name": "utter_services", "policy": "policy_0_MemoizationPolicy", "confidence": 1.0, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:03,271 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,299 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,318 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300142.6872127, "name": "utter_services", "policy": "policy_0_MemoizationPolicy", "confidence": 1.0, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:03,426 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:03,438 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,450 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,482 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,490 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,496 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "bot", "timestamp": 1627300142.6874013, "metadata": {"utter_action": "utter_services"}, "text": "Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.", "data": {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}}'
+2021-07-26 11:49:03,501 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,526 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,534 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "bot", "timestamp": 1627300142.6874013, "metadata": {"utter_action": "utter_services"}, "text": "Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.", "data": {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}}'
+2021-07-26 11:49:03,642 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,668 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,672 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300142.7053962, "name": "action_listen", "policy": "policy_0_MemoizationPolicy", "confidence": 1.0, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:03,676 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,703 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:03,724 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300142.7053962, "name": "action_listen", "policy": "policy_0_MemoizationPolicy", "confidence": 1.0, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:03,824 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:03,842 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:04,179 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:49:04,479 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:04,500 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:04,568 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:04,589 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:04,628 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:04,651 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:05,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:05,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:05,425 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:07,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:07,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:07,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:08,992 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:09,013 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:09,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:09,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:09,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:11,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:11,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:11,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:12,454 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:12,478 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:13,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:13,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:13,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:15,400 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:15,404 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:15,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:17,109 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:17,138 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:17,401 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:17,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:17,425 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:19,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:19,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:19,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:20,345 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:20,380 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:21,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:21,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:21,434 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:23,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:23,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:23,425 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:24,349 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:24,373 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:25,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:25,412 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:25,438 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:27,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:27,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:27,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:28,363 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:28,390 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:29,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:29,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:29,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:31,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:31,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:31,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:33,282 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:33,323 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:33,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:33,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:33,436 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:35,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:35,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:35,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:37,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:37,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:37,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:37,519 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:37,548 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:39,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:39,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:39,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:41,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:41,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:41,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:41,803 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:41,822 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:43,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:43,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:43,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:44,818 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:44,841 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:45,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:45,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:45,433 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:47,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:47,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:47,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:47,881 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:47,903 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:49,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:49,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:49,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:50,935 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:50,960 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:51,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:51,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:51,437 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:52,525 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:52,547 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:52,565 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:52,572 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:52,607 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:52,627 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:52,864 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user", "timestamp": 1627300192.7673676, "text": "Wie sp\\u00e4t ist es", "parse_data": {"intent": {"id": 772680908616423813, "name": "ask_time", "confidence": 0.9944284558296204}, "entities": [], "text": "Wie sp\\u00e4t ist es", "message_id": "92d52e31330947628c1319f0e8b2ab29", "metadata": {}, "intent_ranking": [{"id": 772680908616423813, "name": "ask_time", "confidence": 0.9944284558296204}, {"id": -7182899181972749166, "name": "mood_unhappy", "confidence": 0.002969753462821245}, {"id": 9044792856222867167, "name": "affirm", "confidence": 0.0008782953955233097}, {"id": -6937548869446156231, "name": "search_book", "confidence": 0.0005473190685734153}, {"id": 3846343314885716587, "name": "search_media_type", "confidence": 0.000508079188875854}, {"id": 93817427706749000, "name": "bot_challenge", "confidence": 0.0003219453792553395}, {"id": -7168744945095549391, "name": "inform_book", "confidence": 0.00014690306852571666}, {"id": 8946181157041706534, "name": "greet", "confidence": 9.425056487089023e-05}, {"id": -4923806177826417307, "name": "goodbye", "confidence": 5.360017894417979e-05}, {"id": 1166395643001572550, "name": "mood_great", "confidence": 5.1466722652548924e-05}], "response_selector": {"all_retrieval_intents": [], "default": {"response": {"id": null, "responses": null, "response_templates": null, "confidence": 0.0, "intent_response_key": null, "utter_action": "utter_None", "template_name": "utter_None"}, "ranking": []}}}, "input_channel": "rasa", "message_id": "92d52e31330947628c1319f0e8b2ab29", "metadata": {}}'
+2021-07-26 11:49:52,871 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:52,889 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:52,908 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-26 11:49:52,919 [DEBUG]  Could not find a model in the supplied NLU parse data. Will try to associate the message log with the current production model instead.
+2021-07-26 11:49:52,922 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:52,966 [DEBUG]  Saving to NLU logs:
+<rasax.community.database.conversation.MessageLog object at 0x7f6c26102eb0>
+2021-07-26 11:49:52,970 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user", "timestamp": 1627300192.7673676, "text": "Wie sp\\u00e4t ist es", "parse_data": {"intent": {"id": 772680908616423813, "name": "ask_time", "confidence": 0.9944284558296204}, "entities": [], "text": "Wie sp\\u00e4t ist es", "message_id": "92d52e31330947628c1319f0e8b2ab29", "metadata": {}, "intent_ranking": [{"id": 772680908616423813, "name": "ask_time", "confidence": 0.9944284558296204}, {"id": -7182899181972749166, "name": "mood_unhappy", "confidence": 0.002969753462821245}, {"id": 9044792856222867167, "name": "affirm", "confidence": 0.0008782953955233097}, {"id": -6937548869446156231, "name": "search_book", "confidence": 0.0005473190685734153}, {"id": 3846343314885716587, "name": "search_media_type", "confidence": 0.000508079188875854}, {"id": 93817427706749000, "name": "bot_challenge", "confidence": 0.0003219453792553395}, {"id": -7168744945095549391, "name": "inform_book", "confidence": 0.00014690306852571666}, {"id": 8946181157041706534, "name": "greet", "confidence": 9.425056487089023e-05}, {"id": -4923806177826417307, "name": "goodbye", "confidence": 5.360017894417979e-05}, {"id": 1166395643001572550, "name": "mood_great", "confidence": 5.1466722652548924e-05}], "response_selector": {"all_retrieval_intents": [], "default": {"response": {"id": null, "responses": null, "response_templates": null, "confidence": 0.0, "intent_response_key": null, "utter_action": "utter_None", "template_name": "utter_None"}, "ranking": []}}}, "input_channel": "rasa", "message_id": "92d52e31330947628c1319f0e8b2ab29", "metadata": {}}'
+2021-07-26 11:49:52,986 [DEBUG]  Broadcasting message: {'topic': 'messages', 'name': 'message_sent', 'data': {'channel': 'rasa'}, 'recipient_id': 'ALL', 'scopes': None}
+2021-07-26 11:49:53,016 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,036 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,101 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,139 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,153 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,157 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user_featurization", "timestamp": 1627300192.8042183, "use_text_for_featurization": false}'
+2021-07-26 11:49:53,166 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,187 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,189 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,213 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "user_featurization", "timestamp": 1627300192.8042183, "use_text_for_featurization": false}'
+2021-07-26 11:49:53,322 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,345 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,347 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300192.804267, "name": "action_show_time", "policy": "policy_2_TEDPolicy", "confidence": 0.9943590760231018, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:53,353 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,388 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:53,412 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,413 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300192.804267, "name": "action_show_time", "policy": "policy_2_TEDPolicy", "confidence": 0.9943590760231018, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:53,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,528 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,545 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,548 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "bot", "timestamp": 1627300192.8045187, "text": "2021-07-26 11:49:52.799226", "data": {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, "metadata": {}}'
+2021-07-26 11:49:53,552 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,576 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,582 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "bot", "timestamp": 1627300192.8045187, "text": "2021-07-26 11:49:52.799226", "data": {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, "metadata": {}}'
+2021-07-26 11:49:53,653 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,671 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,673 [DEBUG]  Saving event from origin 'production' to event service:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300192.8339002, "name": "action_listen", "policy": "policy_2_TEDPolicy", "confidence": 0.9997541308403015, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:53,676 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,700 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,716 [DEBUG]  Saving to AnalyticsService:
+'{"sender_id": "67799a07c93c4ae0a0a72d0e5ecc2876", "event": "action", "timestamp": 1627300192.8339002, "name": "action_listen", "policy": "policy_2_TEDPolicy", "confidence": 0.9997541308403015, "action_text": null, "hide_rule_turn": false}'
+2021-07-26 11:49:53,795 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:53,813 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:53,845 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-26 11:49:53,997 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:54,018 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:54,076 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:54,102 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:54,137 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:54,160 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:55,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:55,412 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:55,436 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:57,084 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:57,111 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:57,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:57,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:57,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:49:59,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:49:59,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:49:59,436 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:00,491 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:00,519 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:01,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:01,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:01,439 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:03,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:03,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:03,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:04,434 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:04,459 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:05,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:05,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:05,435 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:07,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:07,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:07,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:09,162 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:09,183 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:09,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:09,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:09,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:11,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:11,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:11,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:12,804 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:12,826 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:13,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:13,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:13,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:15,401 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:15,404 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:15,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:16,712 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:16,774 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:17,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:17,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:17,433 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:19,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:19,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:19,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:21,005 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:21,026 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:21,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:21,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:21,425 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:23,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:23,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:23,439 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:24,840 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:24,864 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:25,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:25,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:25,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:27,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:27,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:27,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:29,074 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:29,094 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:29,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:29,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:29,434 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:31,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:31,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:31,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:32,972 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:32,992 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:33,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:33,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:33,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:35,415 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:35,425 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:35,459 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:36,364 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:36,383 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:37,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:37,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:37,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:39,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:39,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:39,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:40,624 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:40,652 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:41,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:41,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:41,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:43,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:43,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:43,433 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:45,122 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:45,143 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:45,401 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:45,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:45,425 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:47,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:47,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:47,426 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:48,762 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:48,783 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:49,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:49,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:49,441 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:51,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:51,414 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:51,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:52,981 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:53,000 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:53,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:53,410 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:53,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:55,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:55,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:55,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:56,355 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:56,378 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:57,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:57,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:57,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:50:59,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:50:59,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:50:59,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:00,357 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:00,384 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:01,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:01,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:01,426 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:03,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:03,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:03,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:05,240 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:05,261 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:05,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:05,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:05,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:07,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:07,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:07,433 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:08,785 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:08,804 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:09,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:09,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:09,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:11,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:11,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:11,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:13,048 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:13,068 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:13,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:13,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:13,427 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:15,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:15,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:15,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:16,847 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:16,874 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:17,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:17,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:17,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:19,406 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:19,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:19,430 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:21,034 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:21,057 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:21,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:21,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:21,432 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:23,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:23,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:23,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:24,811 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:24,829 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:25,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:25,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:25,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:27,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:27,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:27,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:28,363 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:28,388 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:29,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:29,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:29,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:31,404 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:31,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:31,426 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:32,359 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:32,387 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:33,400 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:33,404 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:33,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:35,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:35,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:35,434 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:37,243 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:37,264 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:37,401 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:37,405 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:37,426 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:39,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:39,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:39,428 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:40,368 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:40,394 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:41,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:41,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:41,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:43,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:43,407 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:43,435 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:44,340 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:44,366 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:45,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:45,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:45,422 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:47,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:47,409 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:47,431 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:49,267 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:49,289 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:49,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:49,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:49,424 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:51,403 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:51,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:51,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:52,700 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:52,721 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:53,405 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:53,408 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:53,429 [DEBUG]  Turned on SQLite WAL mode.
+2021-07-26 11:51:55,402 [DEBUG]  Model discovery completed.
+2021-07-26 11:51:55,406 [DEBUG]  Turned SQLite foreign key enforcement on.
+2021-07-26 11:51:55,430 [DEBUG]  Turned on SQLite WAL mode.

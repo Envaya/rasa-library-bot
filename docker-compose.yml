@@ -9,8 +9,9 @@
 
 services:
   rasa:
-    #container_name: rasax
+    container_name: rasax
     build: .
+    networks: ['rasa-network']
     ports:
       - "5005:5005"
       - "5002:5002"
@@ -20,10 +21,17 @@ services:
     working_dir: /root
     volumes:
       - ./:/root:cached
-    command: rasa x --no-prompt --endpoint docker-local/endpoints.yml --port 5005 --cors "*" --debug
+    #FOR PRODUCTION, ADD THIS TAG: --production
+    command: rasa x --no-prompt --enable-api --endpoints docker-local/endpoints.yml --port 5005 --cors "*" --debug --log-file LOG_FILE
+  action_server:
+    image: rasa/rasa-sdk:latest
+    networks: [ 'rasa-network' ]
+    ports:
+      - "5055:5055"
+    volumes:
+      - "./actions:/app/actions"
+
+networks: { rasa-network: { } }
 
     #leaves the container running because docker container shut down as soon as nothing is running; only necessary if rasa is not being run and you want to inspect the container"
     #command: tail -F anything
-
-
-    #command: rasa x --no-prompt --port 5005 --debug

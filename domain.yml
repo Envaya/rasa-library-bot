@@ -83,6 +83,6 @@ responses:
   - image: https://i.imgur.com/NC6LrRv.jpg
     text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
 actions:
-  - action_show_time
+- action_show_time
 forms: {}
 e2e_actions: []
