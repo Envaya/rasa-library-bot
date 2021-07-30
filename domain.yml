@@ -5,6 +5,10 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- search_media_type:
+    use_entities: true
+- inform_media_type:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -12,10 +16,6 @@ intents:
 - affirm:
     use_entities: true
 - deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
     use_entities: true
 - bot_challenge:
     use_entities: true
@@ -27,24 +27,39 @@ intents:
     use_entities: true
 - inform_book:
     use_entities: true
+- nlu_fallback:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- ask_time:
+    use_entities: true
 entities:
 - book
+- media_type
 slots:
-  book:
-    type: rasa.shared.core.slots.TextSlot
+  media_type:
+    type: rasa.shared.core.slots.CategoricalSlot
     initial_value: null
     auto_fill: true
     influence_conversation: true
+    values:
+    - bilderbücher
+    - lehrmittel
+    - lehrmittel für deutsch
+    - lehrmittel für mathematik
+    - technik
+    - wirtschaft
+    - zeitschriften
+    - übersichtsplan
 responses:
+  utter_default:
+    - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
+  utter_please_rephrase:
+  - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_greet:
   - text: Hey! Wie gehts?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Hier ist etwas fuer dich:'
-  utter_did_that_help:
-  - text: Hat das geholfen?
-  utter_happy:
-  - text: Super, mach weiter!
   utter_goodbye:
   - text: Auf Wiedersehen
   utter_iamabot:
@@ -57,6 +72,19 @@ responses:
   - text: Das Buch {book} ist hier und kann ausgeliehen werden. Du findest es im 2. Stock.
   utter_confirm_booksearch:
   - text: Du suchst nach einem Buch, korrekt?
-actions: []
+  utter_media_types:
+  - image: https://i.imgur.com/ttLhlF9.jpg
+    text: Du weisst nicht wo du suchen sollst? Ich kann dir die Standorte von verschiedenen Medien zeigen.
+  utter_medienstandort_lehrmittel_deutsch:
+  - image: https://i.imgur.com/E8DZALb.jpg
+    text: Deutsche Lehrmittel findest du im 1. Stock, im Westflügel.
+  utter_medienstandort_lehrmittel_mathematik:
+  - image: https://i.imgur.com/m50twB0.jpg
+    text: Lehrmittel Mathematik findest du im 2. Stock neben der Treppe.
+  utter_medienstandort_bilderbuecher:
+  - image: https://i.imgur.com/NC6LrRv.jpg
+    text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
+actions:
+- action_show_time
 forms: {}
 e2e_actions: []

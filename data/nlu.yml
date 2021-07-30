@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - gutenabend
     - abend
     - Guten Morgen
-
 - intent: goodbye
   examples: |
     - tschuess
@@ -24,7 +22,6 @@ nlu:
     - adieu
     - man sieht sich
     - danke
-
 - intent: affirm
   examples: |
     - ja
@@ -32,7 +29,6 @@ nlu:
     - so ist es
     - korrekt
     - jawohl
-
 - intent: deny
   examples: |
     - nein
@@ -40,7 +36,6 @@ nlu:
     - nee
     - nicht
     - no
-
 - intent: mood_great
   examples: |
     - super
@@ -48,19 +43,16 @@ nlu:
     - gut
     - fuehl mich gut
     - grossartig
-
 - intent: mood_unhappy
   examples: |
     - schrecklich
     - schlecht
     - sehr schlecht
     - traurig
-
 - intent: bot_challenge
   examples: |
     - Bist du ein Bot?
     - Bist du ein Mensch?
-
 - intent: search_book
   examples: |
     - Ich suche ein Buch
@@ -71,7 +63,6 @@ nlu:
     - Wo ist das Buch
     - Zeig mir wo das Buch ist
     - Gibt es das Buch
-
 - intent: inform_book
   examples: |
     - [chatbot technology](book)
@@ -84,3 +75,90 @@ nlu:
     - [Gespräch mit dem Betrunkenen](book)
     - [Der kleine Prinz](book)
     - [The Art of Writing](book)
+- intent: search_media_type
+  examples: |
+    - Zeig mir die Medienstandorte
+    - Medienstandorte
+    - medienstandorte
+- intent: inform_media_type
+  examples: |
+    - [Bilderbücher](media_type)
+    - Wo sind [Bild Bücher](media_type)
+    - Ich suche ein [Bilderbuch](media_type)
+    - Ich suche ein [deutsches Lehrmittel](media_type)
+    - [Bild Bücher](media_type)
+    - Ich suche nach [Bilderbüchern](media_type)
+    - Ich suche nach [deutschen Lehrmittel](media_type)
+    - Ich suche nach [deutschen Lehrmitteln](media_type)
+    - Wo sind die [Bilderbücher](media_type)
+    - [Lehrmittel für Deutsch](media_type)
+    - Ich suche nach [Lehrmittel Deutsch](media_type)
+    - [Lehrbücher für Deutsch](media_type)
+    - Ich suche ein [Lehrbuch Deutsch](media_type)
+    - Wo finde ich [deutsche Lehrmittel](media_type)
+    - [Unterrichtsbücher Deutsch](media_type)
+    - [Unterrichtsbücher für Deutsch](media_type)
+    - [deutsche Unterrichtsbücher](media_type)
+    - [Deutsch](media_type)
+    - [Unterrichtsmaterial Deutsch](media_type)
+    - Wo sind [Wirtschaftsbücher](media_type)
+    - Ich suche nach [Lehrmittel Mathematik](media_type)
+    - [unterrichtsbücher für Deutsch](media_type)
+    - [deutsche Lehrbücher](media_type)
+    - ich suche nach [Unterrichtsmaterial für Mathe](media_type)
+- synonym: Bilderbücher
+  examples: |
+    - Bilderbuch
+    - Bild Bücher
+    - Bilderbüchern
+- synonym: Wirtschaft
+  examples: |
+    - Wirtschaftsbücher
+    - Wirtschaftsbuch
+- synonym: Lehrmittel für Deutsch
+  examples: |
+    - Lehrmittel Deutsch
+    - Lehrbücher für Deutsch
+    - Lehrbuch Deutsch
+    - deutsche Lehrmittel
+    - Unterrichtsbücher Deutsch
+    - deutsche Unterrichtsbücher
+    - Lehrbücher Deutsch
+    - unterrichtsbücher für Deutsch
+    - deutsche Lehrbücher
+    - deutsches Lehrmittel
+    - deutschen Lehrmitteln
+    - deutschen Lehrbüchern
+    - Lehrbüchern für Deutsch
+- synonym: Lehrmittel für Mathematik
+  examples: |
+    - Mathe Lehrmittel
+    - Lehrmittel Mathe
+    - Lehrmittel Mathematik
+    - Unterrichtsbücher Mathematik
+    - Unterrichtsbücher für Mathematik
+    - Unterrichtsbücher Mathe
+    - Unterrichtbuch Mathematik
+    - Unterrichtsbuch für Mathematik
+    - Unterrichtsbuch Mathe
+    - Unterrichtsmaterial Mathematik
+    - Unterrichtsmaterial für Mathematik
+    - Unterrichtsmaterial Mathe
+    - Lehrmitteln für Mathematik
+    - Unterrichtsmaterialien für Mathematik
+    - Lehrmittel Rechnen
+    - Rechnen Lehrmittel
+    - Rechen Lehrmittel
+    - Lehrmittel für Rechnen
+    - Unterrichtsbücher Rechnen
+    - Mathematik
+    - Mathematik Lehrmittel
+    - Mathe
+    - Rechnen
+    - Unterrichtsmaterial für Mathe
+- intent: ask_time
+  examples: |
+    - Wie spät ist es
+    - Was ist die Zeit
+    - Wieviel Uhr ist es
+    - Zeit
