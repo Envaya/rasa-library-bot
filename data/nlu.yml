@@ -1,6 +1,5 @@
 version: "2.0"
 nlu:
-
 - intent: chitchat
   examples: |
     - wie gehts dir
@@ -8,7 +7,6 @@ nlu:
     - test
     - wie ist das Wetter
     - sag mir das Wetter
-
 - intent: greet
   examples: |
     - hey
@@ -38,6 +36,7 @@ nlu:
     - so ist es
     - korrekt
     - jawohl
+    - jep
 - intent: deny
   examples: |
     - nein
@@ -45,6 +44,7 @@ nlu:
     - nee
     - nicht
     - no
+    - nope
 - intent: mood_great
   examples: |
     - super
@@ -67,7 +67,6 @@ nlu:
     - Erzähl mir was über dich
     - Mit wem spreche ich
     - wie funtionierst du
-
 - intent: search_media_type
   examples: |
     - Zeig mir die Medienstandorte
@@ -105,7 +104,6 @@ nlu:
     - Was ist die Zeit
     - Wieviel Uhr ist es
     - Zeit
-
 - intent: register_library
   examples: |
     - Ich möchte mich für die Bibliothek registrieren
@@ -115,19 +113,17 @@ nlu:
     - Registriere mich für die Bibliothek
     - Bibliothekregistrierung
     - Ich will mich für die Bibliothek anmelden
-
+    - neuregistrierung bibliothek
 - intent: continue
   examples: |
     - weiter
     - witer
     - fortfahren
-
 - intent: cancel
   examples: |
     - abbrechen
     - stop
     - beenden
-
 - synonym: Bilderbücher
   examples: |
     - Bilderbuch

@@ -96,3 +96,20 @@ stories:
   - action: utter_cancel_confirm
   - intent: deny
   - action: utter_confirm
+
+- story: register for library cancel
+  steps:
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: affirm
+  - action: utter_swisscovery
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: deny
+  - action: utter_confirm_eduid
+  - intent: deny
+  - action: utter_eduid
+  - intent: cancel
+  - action: utter_cancel_confirm
+  - intent: affirm
+  - action: utter_reset

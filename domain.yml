@@ -5,6 +5,9 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- affirm
+- register_library
+- deny
 - chitchat
 - search_media_type:
     use_entities: true
@@ -16,10 +19,6 @@ intents:
     use_entities: true
 - goodbye:
     use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
 - bot_challenge:
     use_entities: true
 - nlu_fallback:
@@ -29,8 +28,6 @@ intents:
 - mood_unhappy:
     use_entities: true
 - ask_time:
-    use_entities: true
-- register_library:
     use_entities: true
 entities:
 - media_type
@@ -52,7 +49,6 @@ slots:
   is_fhnw_member:
     type: bool
     influence_conversation: true
-
 responses:
   utter_default:
   - text: Das konnte ich nicht verstehen. Bitte umformulieren.
@@ -96,11 +92,11 @@ responses:
   utter_cancel_confirm:
   - text: Möchtest du den Vorgang abbrechen?
   utter_reset:
-    - text: Der Vorgang wurde abgebrochen. Wie kann ich dir behilflich sein?
+  - text: Der Vorgang wurde abgebrochen. Wie kann ich dir behilflich sein?
   utter_confirm:
-    - text: Verstanden.
+  - text: Verstanden.
   utter_complete_data:
-    - text: Achte darauf diese Daten vollständig auszufüllen.
+  - text: Achte darauf diese Daten vollständig auszufüllen.
 actions:
 - action_show_time
 forms: {}
