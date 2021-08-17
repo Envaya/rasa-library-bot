@@ -54,6 +54,8 @@ slots:
     - zeitschriften
     - übersichtsplan
 responses:
+  utter_default:
+    - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_please_rephrase:
   - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_greet:
