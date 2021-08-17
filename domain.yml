@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- chitchat
 - search_media_type:
     use_entities: true
 - inform_media_type:
@@ -19,14 +20,6 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-- search_book:
-    use_entities: true
-- inform_book_location:
-    use_entities: true
-- utter_book_info:
-    use_entities: true
-- inform_book:
-    use_entities: true
 - nlu_fallback:
     use_entities: true
 - mood_great:
@@ -35,8 +28,9 @@ intents:
     use_entities: true
 - ask_time:
     use_entities: true
+- register_library:
+    use_entities: true
 entities:
-- book
 - media_type
 slots:
   media_type:
@@ -53,25 +47,28 @@ slots:
     - wirtschaft
     - zeitschriften
     - übersichtsplan
+  is_student:
+    type: bool
+    influence_conversation: true
+
 responses:
   utter_default:
-    - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
+  - text: Das konnte ich nicht verstehen. Bitte umformulieren.
+  - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_please_rephrase:
   - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_greet:
   - text: Hey! Wie gehts?
   utter_goodbye:
   - text: Auf Wiedersehen
+  - text: Tschüss
+  - text: Machs gut
+  - text: Ciao und bis zum nächsten Mal
   utter_iamabot:
-  - text: Ich bin ein Bot von Rasa.
+  - text: Ich bin ein Pepper Roboter. Für die Interaktion mit dir benutze ich einen Rasa Chatbot.
   utter_services:
-  - text: Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
-  utter_ask_booktitle:
-  - text: Welches Buch suchst du?
-  utter_book_info:
-  - text: Das Buch {book} ist hier und kann ausgeliehen werden. Du findest es im 2. Stock.
-  utter_confirm_booksearch:
-  - text: Du suchst nach einem Buch, korrekt?
+  - text: Hallo, ich bin Auxilio. Dieser Modus wurde für ein Studentenprojekt entwickelt und benutzt einen Rasa Chatbot. Wie kann ich dir weiterhelfen?.
+  - text: Guten Tag. Ich heisse Auxilio. Mit was darf ich dir heute helfen?
   utter_media_types:
   - image: https://i.imgur.com/ttLhlF9.jpg
     text: Du weisst nicht wo du suchen sollst? Ich kann dir die Standorte von verschiedenen Medien zeigen.
@@ -84,7 +81,25 @@ responses:
   utter_medienstandort_bilderbuecher:
   - image: https://i.imgur.com/NC6LrRv.jpg
     text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
+  utter_library_registration_slots:
+  - text: Deine Antwort auf bist du Student ist {is_student}.
+  utter_ask_is_student:
+  - text: Arbeitest oder studierst du an der FHNW?
+  utter_library_registration_intro:
+  - text: Ich erkläre dir, wie du dich für das neue Rechercheportal swiss covery registrierst. Halte bitte dein Smartphone oder deinen Leptop bereit.
 actions:
 - action_show_time
-forms: {}
+
+forms:
+  library_registration_form:
+    ignored_intents:
+      - chitchat
+    required_slots:
+      is_student:
+      - intent: affirm
+        type: from_intent
+        value: true
+      - intent: deny
+        type: from_intent
+        value: false
 e2e_actions: []

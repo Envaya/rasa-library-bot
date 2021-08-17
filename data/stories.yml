@@ -1,31 +1,20 @@
 version: "2.0"
 
 stories:
+- story: chitchat
+  steps:
+    - intent: chitchat
+    - action: utter_default
 
 - story: intro
   steps:
   - intent: greet
   - action: utter_services
 
-- story: search book
+- story: bot challenge
   steps:
-  - intent: search_book
-  - action: utter_confirm_booksearch
-  - intent: affirm
-  - action: utter_ask_booktitle
-  - intent: inform_book
-    entities:
-    - book: "Harry Potter"
-  - action: utter_book_info
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: search book deny
-  steps:
-  - intent: search_book
-  - action: utter_confirm_booksearch
-  - intent: deny
-  - action: utter_services
+  - intent: bot_challenge
+  - action: utter_iamabot
 
 - story: medienstandorte lehrmittel deutsch
   steps:
