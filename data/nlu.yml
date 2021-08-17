@@ -106,6 +106,12 @@ nlu:
     - [unterrichtsbücher für Deutsch](media_type)
     - [deutsche Lehrbücher](media_type)
     - ich suche nach [Unterrichtsmaterial für Mathe](media_type)
+- intent: ask_time
+  examples: |
+    - Wie spät ist es
+    - Was ist die Zeit
+    - Wieviel Uhr ist es
+    - Zeit
 - synonym: Bilderbücher
   examples: |
     - Bilderbuch
@@ -156,9 +162,3 @@ nlu:
     - Mathe
     - Rechnen
     - Unterrichtsmaterial für Mathe
-- intent: ask_time
-  examples: |
-    - Wie spät ist es
-    - Was ist die Zeit
-    - Wieviel Uhr ist es
-    - Zeit
