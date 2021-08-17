@@ -8,6 +8,8 @@ intents:
 - chitchat
 - search_media_type:
     use_entities: true
+- continue
+- cancel
 - inform_media_type:
     use_entities: true
 - greet:
@@ -47,7 +49,7 @@ slots:
     - wirtschaft
     - zeitschriften
     - übersichtsplan
-  is_student:
+  is_fhnw_member:
     type: bool
     influence_conversation: true
 
@@ -81,25 +83,36 @@ responses:
   utter_medienstandort_bilderbuecher:
   - image: https://i.imgur.com/NC6LrRv.jpg
     text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
-  utter_library_registration_slots:
-  - text: Deine Antwort auf bist du Student ist {is_student}.
-  utter_ask_is_student:
+  utter_confirm_fhnw_member:
   - text: Arbeitest oder studierst du an der FHNW?
   utter_library_registration_intro:
   - text: Ich erkläre dir, wie du dich für das neue Rechercheportal swiss covery registrierst. Halte bitte dein Smartphone oder deinen Leptop bereit.
+  utter_swisscovery:
+  - text: Swisscovery Zeug
+  utter_eduid:
+  - text: EduID Zeug
+  utter_confirm_eduid:
+  - text: Besitzt du bereits eine edu-ID?
+  utter_cancel_confirm:
+  - text: Möchtest du den Vorgang abbrechen?
+  utter_reset:
+    - text: Der Vorgang wurde abgebrochen. Wie kann ich dir behilflich sein?
+  utter_confirm:
+    - text: Verstanden.
+  utter_complete_data:
+    - text: Achte darauf diese Daten vollständig auszufüllen.
 actions:
 - action_show_time
-
-forms:
-  library_registration_form:
-    ignored_intents:
-      - chitchat
-    required_slots:
-      is_student:
-      - intent: affirm
-        type: from_intent
-        value: true
-      - intent: deny
-        type: from_intent
-        value: false
+forms: {}
+#  library_registration_form:
+#    ignored_intents:
+#      - chitchat
+#    required_slots:
+#      is_student:
+#      - intent: affirm
+#        type: from_intent
+#        value: true
+#      - intent: deny
+#        type: from_intent
+#        value: false
 e2e_actions: []

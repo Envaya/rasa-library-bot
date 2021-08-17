@@ -5,22 +5,21 @@ rules:
   - intent: nlu_fallback
   - action: utter_please_rephrase
 
-- rule: Start library registration form
-  steps:
-  - intent: register_library
-  - action: utter_library_registration_intro
-  - action: library_registration_form
-  - active_loop: library_registration_form
+#- rule: Start library registration form
+#  steps:
+#  - intent: register_library
+#  - action: utter_library_registration_intro
+#  - action: library_registration_form
+#  - active_loop: library_registration_form
 
-- rule: End library registration form
-  condition:
-  # Condition that form is active.
-  - active_loop: library_registration_form
-  steps:
-  # Form is deactivated
-  - action: library_registration_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  # The actions we want to run when the form is submitted.
-  - action: utter_library_registration_slots
+#- rule: End library registration form
+#  condition:
+#  # Condition that form is active.
+#  - active_loop: library_registration_form
+#  steps:
+#  # Form is deactivated
+#  - action: library_registration_form
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  # The actions we want to run when the form is submitted.

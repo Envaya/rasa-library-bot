@@ -64,3 +64,35 @@ stories:
   steps:
   - intent: ask_time
   - action: action_show_time
+
+- story: register for library member
+  steps:
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: affirm
+  - action: utter_swisscovery
+
+- story: register for library nonmember no eduid
+  steps:
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: deny
+  - action: utter_confirm_eduid
+  - intent: deny
+  - action: utter_eduid
+  - intent: continue
+  - action: utter_complete_data
+
+- story: cancel process confirm
+  steps:
+  - intent: cancel
+  - action: utter_cancel_confirm
+  - intent: affirm
+  - action: utter_reset
+
+- story: cancel process deny
+  steps:
+  - intent: cancel
+  - action: utter_cancel_confirm
+  - intent: deny
+  - action: utter_confirm

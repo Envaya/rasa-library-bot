@@ -105,6 +105,29 @@ nlu:
     - Was ist die Zeit
     - Wieviel Uhr ist es
     - Zeit
+
+- intent: register_library
+  examples: |
+    - Ich möchte mich für die Bibliothek registrieren
+    - Neuregistrierung
+    - Registrierung Bibliothek
+    - Bibliothek registrieren
+    - Registriere mich für die Bibliothek
+    - Bibliothekregistrierung
+    - Ich will mich für die Bibliothek anmelden
+
+- intent: continue
+  examples: |
+    - weiter
+    - witer
+    - fortfahren
+
+- intent: cancel
+  examples: |
+    - abbrechen
+    - stop
+    - beenden
+
 - synonym: Bilderbücher
   examples: |
     - Bilderbuch
