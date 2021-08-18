@@ -22,7 +22,7 @@ test-stories:
     - apk add docker docker-compose
     - docker-compose build --no-cache
     - docker-compose up -d
-    - docker exec -it rasax bash
+    - docker exec rasax bash
     - rasa data validate --fail-on-warnings --max-history 5
     - rasa train
     - rasa test
