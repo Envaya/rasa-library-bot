@@ -1,5 +1,5 @@
+#image: ubuntu:latest
 image: docker:latest
-
 services:
   - docker:dind
 
@@ -14,3 +14,14 @@ build:
   stage: build
   script:
     - echo run tests in this section
+
+test-stories:
+  stage: test
+  script:
+    - apk update && apk add -y software-properties-common
+    - add-apt-repository universe
+    - apk add -y python3-pip
+    - pip3 install --upgrade setuptools
+    - pip3 install docker-compose
+    - docker-compose build --no-cache
+    - docker-compose up -d
