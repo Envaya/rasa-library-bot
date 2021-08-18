@@ -18,6 +18,5 @@ build:
 test-stories:
   stage: test
   script:
-    - apk update && apk add software-properties-common
     - docker-compose build --no-cache
     - docker-compose up -d
