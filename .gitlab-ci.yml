@@ -15,9 +15,8 @@ build:
 test-stories:
   stage: test
   script:
-    - apt-get install software-properties-common
+    - apt-get update && apt-get install -y software-properties-common
     - add-apt-repository universe
-    - apt-get update
     - apt-get install -y python3-pip
     - pip3 install --upgrade setuptools
     - pip3 install docker-compose
