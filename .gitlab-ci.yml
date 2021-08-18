@@ -18,7 +18,7 @@ build:
 test-stories:
   stage: test
   script:
-    - apk update && apk add -y software-properties-common
+    - apk update && apk add software-properties-common
     - add-apt-repository universe
     - apk add -y python3-pip
     - pip3 install --upgrade setuptools
