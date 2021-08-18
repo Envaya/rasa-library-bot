@@ -5,8 +5,10 @@ FROM python:3.8
 
 # install dependencies
 WORKDIR /root
-
+RUN apt-get -qq update && \
+    apt-get install -qqy --no-install-recommends
 RUN python -m pip install --upgrade pip==20.2
+
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
