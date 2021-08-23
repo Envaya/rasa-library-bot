@@ -1,27 +1,24 @@
-FROM python:3.8
+services:
+  rasa:
+    container_name: rasax
+    build: .
+    networks: ['rasa-network']
+    ports:
+      - "5005:5005"
+      - "5002:5002"
+    working_dir: /root
+    volumes:
+      - ./:/root:cached
+    environment:
+      - RASA_X_PASSWORD=${RASA_X_PASSWORD}
+    #FOR PRODUCTION, ADD THIS TAG: --production
+    command: rasa x --no-prompt --enable-api --endpoints docker-local/endpoints.yml --port 5005 --cors "*" --debug --log-file LOG_FILE
+  action_server:
+    image: rasa/rasa-sdk:latest
+    networks: [ 'rasa-network' ]
+    ports:
+      - "5055:5055"
+    volumes:
+      - "./actions:/app/actions"
 
-# install dependencies
-WORKDIR /root
-RUN apt-get -qq update && \
-    apt-get install -qqy --no-install-recommends
-RUN python -m pip install --upgrade pip==20.2
-
-
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-# install nlp model spacy
-RUN pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
-RUN pip install --default-timeout=1800 "https://github.com/explosion/spacy-models/releases/download/de_dep_news_trf-3.0.0/de_dep_news_trf-3.0.0-py3-none-any.whl"
-RUN pip install --default-timeout=1800 "https://github.com/explosion/spacy-models/releases/download/de_dep_news_trf-3.1.0/de_dep_news_trf-3.1.0-py3-none-any.whl" --user
-
-# expose port for rasa server
-EXPOSE 5005
-
-# expose port for rasa X server
-EXPOSE 5002
-
-# expose port for ssh
-EXPOSE 22
-EXPOSE 443
-EXPOSE 80
+networks: { rasa-network: { } }
