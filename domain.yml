@@ -5,14 +5,20 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- affirm
-- register_library
-- deny
-- chitchat
+- affirm:
+    use_entities: true
+- register_library:
+    use_entities: true
+- deny:
+    use_entities: true
+- chitchat:
+    use_entities: true
 - search_media_type:
     use_entities: true
-- continue
-- cancel
+- continue:
+    use_entities: true
+- cancel:
+    use_entities: true
 - inform_media_type:
     use_entities: true
 - greet:
@@ -47,7 +53,9 @@ slots:
     - zeitschriften
     - übersichtsplan
   is_fhnw_member:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
 responses:
   utter_default:
@@ -100,15 +108,4 @@ responses:
 actions:
 - action_show_time
 forms: {}
-#  library_registration_form:
-#    ignored_intents:
-#      - chitchat
-#    required_slots:
-#      is_student:
-#      - intent: affirm
-#        type: from_intent
-#        value: true
-#      - intent: deny
-#        type: from_intent
-#        value: false
 e2e_actions: []

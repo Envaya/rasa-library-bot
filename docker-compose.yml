@@ -1,10 +1,11 @@
-# version: "1.0"
+# in case of 'Unsupported config option...' error, uncomment the version below:
+# version: "3.4"
 
 services:
   rasa:
     container_name: rasax
     build: .
-    networks: [ 'rasa-network' ]
+    networks: ['rasa-network']
     ports:
       - "5005:5005"
       - "5002:5002"
@@ -13,11 +14,8 @@ services:
       - ./:/root:cached
     environment:
       - RASA_X_PASSWORD=${RASA_X_PASSWORD}
-      - RASA_TOKEN=${RASA_TOKEN}
-      - PASSWORD_SALT=${PASSWORD_SALT}
-      - JWT_SECRET=${JWT_SECRET}
     #FOR PRODUCTION, ADD THIS TAG: --production
-    command: bash -c "rasa x --no-prompt --enable-api --endpoints endpoints.yml --port 5005 --cors "*" --debug --log-file LOG_FILE && rasa data validate --fail-on-warnings --max-history 5 && rasa train"
+    command: rasa x --no-prompt --enable-api --endpoints docker-local/endpoints.yml --port 5005 --cors "*" --debug --log-file LOG_FILE
   action_server:
     image: rasa/rasa-sdk:latest
     networks: [ 'rasa-network' ]
