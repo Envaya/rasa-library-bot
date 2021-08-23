@@ -1,29 +1,27 @@
-# rasa train
-# docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3
-# docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3 --build-arg REPO=https://github.com/rgstephens/rasa-webchat --build-arg BRANCH=links-open-tab
-# docker-compose -f docker-compose-local.yml up -d
-# docker-compose -f docker-compose-local.yml logs | grep password
-# browse to http://localhost:5002 or http://localhost:8080
+FROM python:3.8
 
-# version: "1.0"
-
-services:
-  rasa:
-    #container_name: rasax
-    build: .
-    ports:
-      - "5005:5005"
-      - "5002:5002"
-#    volumes:
-#      - ./:/app
-    #command: rasa x --no-prompt --port 5005 --cors "*" --debug
-    working_dir: /root
-    volumes:
-      - ./:/root:cached
-    command: rasa x --no-prompt --endpoint docker-local/endpoints.yml --port 5005 --cors "*" --debug
-
-    #leaves the container running because docker container shut down as soon as nothing is running; only necessary if rasa is not being run and you want to inspect the container"
-    #command: tail -F anything
+# install dependencies
+WORKDIR /root
+RUN apt-get -qq update && \
+    apt-get install -qqy --no-install-recommends
+RUN python -m pip install --upgrade pip==20.2
 
 
-    #command: rasa x --no-prompt --port 5005 --debug
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# install nlp model spacy
+RUN pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+RUN pip install --default-timeout=1800 "https://github.com/explosion/spacy-models/releases/download/de_dep_news_trf-3.0.0/de_dep_news_trf-3.0.0-py3-none-any.whl"
+RUN pip install --default-timeout=1800 "https://github.com/explosion/spacy-models/releases/download/de_dep_news_trf-3.1.0/de_dep_news_trf-3.1.0-py3-none-any.whl" --user
+
+# expose port for rasa server
+EXPOSE 5005
+
+# expose port for rasa X server
+EXPOSE 5002
+
+# expose port for ssh
+EXPOSE 22
+EXPOSE 443
+EXPOSE 80
