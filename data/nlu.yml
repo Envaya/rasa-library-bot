@@ -22,6 +22,7 @@ nlu:
     - gutenabend
     - abend
     - Guten Morgen
+    - sali
 - intent: goodbye
   examples: |
     - tschuess
