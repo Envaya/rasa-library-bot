@@ -1,31 +1,20 @@
 version: "2.0"
 
 stories:
+- story: chitchat
+  steps:
+    - intent: chitchat
+    - action: utter_default
 
 - story: intro
   steps:
   - intent: greet
   - action: utter_services
 
-- story: search book
+- story: bot challenge
   steps:
-  - intent: search_book
-  - action: utter_confirm_booksearch
-  - intent: affirm
-  - action: utter_ask_booktitle
-  - intent: inform_book
-    entities:
-    - book: "Harry Potter"
-  - action: utter_book_info
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: search book deny
-  steps:
-  - intent: search_book
-  - action: utter_confirm_booksearch
-  - intent: deny
-  - action: utter_services
+  - intent: bot_challenge
+  - action: utter_iamabot
 
 - story: medienstandorte lehrmittel deutsch
   steps:
@@ -75,3 +64,52 @@ stories:
   steps:
   - intent: ask_time
   - action: action_show_time
+
+- story: register for library member
+  steps:
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: affirm
+  - action: utter_swisscovery
+
+- story: register for library nonmember no eduid
+  steps:
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: deny
+  - action: utter_confirm_eduid
+  - intent: deny
+  - action: utter_eduid
+  - intent: continue
+  - action: utter_complete_data
+
+- story: cancel process confirm
+  steps:
+  - intent: cancel
+  - action: utter_cancel_confirm
+  - intent: affirm
+  - action: utter_reset
+
+- story: cancel process deny
+  steps:
+  - intent: cancel
+  - action: utter_cancel_confirm
+  - intent: deny
+  - action: utter_confirm
+
+- story: register for library cancel
+  steps:
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: affirm
+  - action: utter_swisscovery
+  - intent: register_library
+  - action: utter_confirm_fhnw_member
+  - intent: deny
+  - action: utter_confirm_eduid
+  - intent: deny
+  - action: utter_eduid
+  - intent: cancel
+  - action: utter_cancel_confirm
+  - intent: affirm
+  - action: utter_reset

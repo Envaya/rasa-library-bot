@@ -1,11 +1,5 @@
-# rasa train
-# docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3
-# docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3 --build-arg REPO=https://github.com/rgstephens/rasa-webchat --build-arg BRANCH=links-open-tab
-# docker-compose -f docker-compose-local.yml up -d
-# docker-compose -f docker-compose-local.yml logs | grep password
-# browse to http://localhost:5002 or http://localhost:8080
-
-# version: "1.0"
+# in case of 'Unsupported config option...' error, uncomment the version below:
+# version: "3.4"
 
 services:
   rasa:
@@ -15,12 +9,11 @@ services:
     ports:
       - "5005:5005"
       - "5002:5002"
-#    volumes:
-#      - ./:/app
-    #command: rasa x --no-prompt --port 5005 --cors "*" --debug
     working_dir: /root
     volumes:
       - ./:/root:cached
+    environment:
+      - RASA_X_PASSWORD=${RASA_X_PASSWORD}
     #FOR PRODUCTION, ADD THIS TAG: --production
     command: rasa x --no-prompt --enable-api --endpoints docker-local/endpoints.yml --port 5005 --cors "*" --debug --log-file LOG_FILE
   action_server:
@@ -32,6 +25,3 @@ services:
       - "./actions:/app/actions"
 
 networks: { rasa-network: { } }
-
-    #leaves the container running because docker container shut down as soon as nothing is running; only necessary if rasa is not being run and you want to inspect the container"
-    #command: tail -F anything

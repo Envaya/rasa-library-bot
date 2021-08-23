@@ -5,7 +5,19 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- affirm:
+    use_entities: true
+- register_library:
+    use_entities: true
+- deny:
+    use_entities: true
+- chitchat:
+    use_entities: true
 - search_media_type:
+    use_entities: true
+- continue:
+    use_entities: true
+- cancel:
     use_entities: true
 - inform_media_type:
     use_entities: true
@@ -13,19 +25,7 @@ intents:
     use_entities: true
 - goodbye:
     use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
 - bot_challenge:
-    use_entities: true
-- search_book:
-    use_entities: true
-- inform_book_location:
-    use_entities: true
-- utter_book_info:
-    use_entities: true
-- inform_book:
     use_entities: true
 - nlu_fallback:
     use_entities: true
@@ -36,7 +36,6 @@ intents:
 - ask_time:
     use_entities: true
 entities:
-- book
 - media_type
 slots:
   media_type:
@@ -53,25 +52,29 @@ slots:
     - wirtschaft
     - zeitschriften
     - übersichtsplan
+  is_fhnw_member:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_default:
-    - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
+  - text: Das konnte ich nicht verstehen. Bitte umformulieren.
+  - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_please_rephrase:
   - text: Entschuldige, das habe ich nicht verstanden. Bitte anders formulieren.
   utter_greet:
   - text: Hey! Wie gehts?
   utter_goodbye:
   - text: Auf Wiedersehen
+  - text: Tschüss
+  - text: Machs gut
+  - text: Ciao und bis zum nächsten Mal
   utter_iamabot:
-  - text: Ich bin ein Bot von Rasa.
+  - text: Ich bin ein Pepper Roboter. Für die Interaktion mit dir benutze ich einen Rasa Chatbot.
   utter_services:
-  - text: Hallo, ich bin Auxilio. Ich kann dir bei der Buch Suche, Buchausleihe, beim Mensa Menu und beim SBB Fahrplan weiterhelfen.
-  utter_ask_booktitle:
-  - text: Welches Buch suchst du?
-  utter_book_info:
-  - text: Das Buch {book} ist hier und kann ausgeliehen werden. Du findest es im 2. Stock.
-  utter_confirm_booksearch:
-  - text: Du suchst nach einem Buch, korrekt?
+  - text: Hallo, ich bin Auxilio. Dieser Modus wurde für ein Studentenprojekt entwickelt und benutzt einen Rasa Chatbot. Wie kann ich dir weiterhelfen?.
+  - text: Guten Tag. Ich heisse Auxilio. Mit was darf ich dir heute helfen?
   utter_media_types:
   - image: https://i.imgur.com/ttLhlF9.jpg
     text: Du weisst nicht wo du suchen sollst? Ich kann dir die Standorte von verschiedenen Medien zeigen.
@@ -84,6 +87,24 @@ responses:
   utter_medienstandort_bilderbuecher:
   - image: https://i.imgur.com/NC6LrRv.jpg
     text: Bilderbücher findest du gleich links neben dem Eingang im 1. Stock.
+  utter_confirm_fhnw_member:
+  - text: Arbeitest oder studierst du an der FHNW?
+  utter_library_registration_intro:
+  - text: Ich erkläre dir, wie du dich für das neue Rechercheportal swiss covery registrierst. Halte bitte dein Smartphone oder deinen Leptop bereit.
+  utter_swisscovery:
+  - text: Swisscovery Zeug
+  utter_eduid:
+  - text: EduID Zeug
+  utter_confirm_eduid:
+  - text: Besitzt du bereits eine edu-ID?
+  utter_cancel_confirm:
+  - text: Möchtest du den Vorgang abbrechen?
+  utter_reset:
+  - text: Der Vorgang wurde abgebrochen. Wie kann ich dir behilflich sein?
+  utter_confirm:
+  - text: Verstanden.
+  utter_complete_data:
+  - text: Achte darauf diese Daten vollständig auszufüllen.
 actions:
 - action_show_time
 forms: {}

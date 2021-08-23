@@ -1,5 +1,12 @@
 version: "2.0"
 nlu:
+- intent: chitchat
+  examples: |
+    - wie gehts dir
+    - was machst du
+    - test
+    - wie ist das Wetter
+    - sag mir das Wetter
 - intent: greet
   examples: |
     - hey
@@ -29,6 +36,7 @@ nlu:
     - so ist es
     - korrekt
     - jawohl
+    - jep
 - intent: deny
   examples: |
     - nein
@@ -36,6 +44,7 @@ nlu:
     - nee
     - nicht
     - no
+    - nope
 - intent: mood_great
   examples: |
     - super
@@ -51,30 +60,13 @@ nlu:
     - traurig
 - intent: bot_challenge
   examples: |
-    - Bist du ein Bot?
-    - Bist du ein Mensch?
-- intent: search_book
-  examples: |
-    - Ich suche ein Buch
-    - Buch
-    - Ich suche [chatbot technology](book)
-    - Wo ist [chatbot technology](book)
-    - Ich möchte ein Buch ausleihen
-    - Wo ist das Buch
-    - Zeig mir wo das Buch ist
-    - Gibt es das Buch
-- intent: inform_book
-  examples: |
-    - [chatbot technology](book)
-    - [Bibel](book)
-    - [The design of future things](book)
-    - Ich suche [Harry Potter](book)
-    - [Herr der Ringe](book)
-    - [Andersens Märchen](book)
-    - [Das Urteil](book)
-    - [Gespräch mit dem Betrunkenen](book)
-    - [Der kleine Prinz](book)
-    - [The Art of Writing](book)
+    - Bist du ein Bot
+    - Bist du ein Mensch
+    - Wer bist du
+    - Wer sind sie
+    - Erzähl mir was über dich
+    - Mit wem spreche ich
+    - wie funtionierst du
 - intent: search_media_type
   examples: |
     - Zeig mir die Medienstandorte
@@ -106,11 +98,40 @@ nlu:
     - [unterrichtsbücher für Deutsch](media_type)
     - [deutsche Lehrbücher](media_type)
     - ich suche nach [Unterrichtsmaterial für Mathe](media_type)
+- intent: ask_time
+  examples: |
+    - Wie spät ist es
+    - Was ist die Zeit
+    - Wieviel Uhr ist es
+    - Zeit
+- intent: register_library
+  examples: |
+    - Ich möchte mich für die Bibliothek registrieren
+    - Neuregistrierung
+    - Registrierung Bibliothek
+    - Bibliothek registrieren
+    - Registriere mich für die Bibliothek
+    - Bibliothekregistrierung
+    - Ich will mich für die Bibliothek anmelden
+    - neuregistrierung bibliothek
+- intent: continue
+  examples: |
+    - weiter
+    - witer
+    - fortfahren
+- intent: cancel
+  examples: |
+    - abbrechen
+    - stop
+    - beenden
 - synonym: Bilderbücher
   examples: |
     - Bilderbuch
     - Bild Bücher
     - Bilderbüchern
+    - Kinderbücher
+    - Kinderbuch
+    - Bücher für Kinder
 - synonym: Wirtschaft
   examples: |
     - Wirtschaftsbücher
@@ -156,9 +177,3 @@ nlu:
     - Mathe
     - Rechnen
     - Unterrichtsmaterial für Mathe
-- intent: ask_time
-  examples: |
-    - Wie spät ist es
-    - Was ist die Zeit
-    - Wieviel Uhr ist es
-    - Zeit
