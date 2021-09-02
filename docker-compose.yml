@@ -1,5 +1,4 @@
-# in case of 'Unsupported config option...' error, uncomment the version below:
-# version: "3.4"
+version: "3.4"
 
 services:
   rasa:
