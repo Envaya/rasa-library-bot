@@ -46,6 +46,15 @@ nlu:
     - nicht
     - no
     - nope
+- intent: tell_joke
+  examples: |
+    - erzähl mir einen Witz
+    - sei lustig
+    - unterhalte mich
+    - ich möchte lachen
+    - kennst du einen Witz
+    - sag was lustiges
+    - erzähl mir einen witz
 - intent: mood_great
   examples: |
     - super
@@ -104,7 +113,9 @@ nlu:
     - Wie spät ist es
     - Was ist die Zeit
     - Wieviel Uhr ist es
+    - Sag mir die Zeit
     - Zeit
+    - wie spät ist es
 - intent: register_library
   examples: |
     - Ich möchte mich für die Bibliothek registrieren

@@ -113,3 +113,8 @@ stories:
   - action: utter_cancel_confirm
   - intent: affirm
   - action: utter_reset
+
+- story: joke
+  steps:
+    - intent: tell_joke
+    - action: action_joke

@@ -5,26 +5,8 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 
-# This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+import requests
+import json
 
 import datetime as dt
 
@@ -32,7 +14,6 @@ from typing import Text, List, Any, Dict
 
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.types import DomainDict
 
 
 class ActionHelloWorld(Action):
@@ -65,6 +46,20 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message("Es ist {} Uhr {}. {}. {}".format(hour, minutes, day, month))
         return []
 
+
+class ActionJoke(Action):
+    def name(self):
+        # define the name of the action which can then be included in training stories
+        return "action_joke"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        request = requests.get("https://witzapi.de/api/joke")
+        response = request.json()
+        dispatcher.utter_message(response[0]["text"])  # send the message back to the user
+        return []
 
 # class ValidateLibraryRegistrationForm(FormValidationAction):
 #     def name(self) -> Text:

@@ -35,6 +35,8 @@ intents:
     use_entities: true
 - ask_time:
     use_entities: true
+- tell_joke:
+    use_entities: true
 entities:
 - media_type
 slots:
@@ -107,5 +109,6 @@ responses:
   - text: Achte darauf diese Daten vollständig auszufüllen.
 actions:
 - action_show_time
+- action_joke
 forms: {}
 e2e_actions: []

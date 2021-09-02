@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # install nlp model spacy
-RUN pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+RUN pip install rasa-x==0.41.2 --extra-index-url https://pypi.rasa.com/simple
 RUN pip install --default-timeout=1800 "https://github.com/explosion/spacy-models/releases/download/de_dep_news_trf-3.0.0/de_dep_news_trf-3.0.0-py3-none-any.whl"
 
 # expose port for rasa server
